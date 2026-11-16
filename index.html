@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#0f1215">
+<title>Posto Guilhotina 9M</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+Gurmukhi:wght@500;700;800&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#0f1215;--p:#1a1f24;--ln:#303940;--ink:#eef1f3;--mu:#a8b2ba;--amb:#f5a524;--grn:#2fbf71;--red:#c52f37;--run-h:0px;--reason-h:0px}
+*{box-sizing:border-box;min-width:0}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 Inter,'Noto Sans Gurmukhi',system-ui,sans-serif;font-variant-numeric:tabular-nums;-webkit-tap-highlight-color:transparent}h1,h2,h3,p{margin:0}h1{font-size:24px}h2{font-size:23px}h3{font-size:20px}small{font-size:14px}button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px solid var(--ln);background:var(--p);border-radius:12px;min-height:48px;padding:10px 16px;touch-action:manipulation;font-weight:700}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8db8ff;outline-offset:3px}button.on,.a{background:var(--amb);border-color:var(--amb);color:#171105}.g{background:var(--grn);border-color:var(--grn);color:#06210f}.r{background:var(--red);border-color:var(--red);color:#fff}button:active{filter:brightness(.9)}.mu,dt{color:var(--mu)}.accent{color:var(--amb);font-size:14px}.w{max-width:980px;margin:auto;padding:22px clamp(14px,3vw,28px) calc(125px + var(--reason-h));display:flex;flex-direction:column;gap:20px}.w.with-run{padding-top:calc(var(--run-h) + 20px)}.top,.section-title{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}.top h1{flex:1}.lg{display:flex;gap:6px}.lg button{padding:8px 12px;font-size:15px}.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.seg button{min-height:56px}.seg.nav{grid-template-columns:1fr 1fr}.shifts button{display:flex;flex-direction:column;align-items:center;gap:3px}.shifts small{font-weight:500}.users{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.users button{min-height:175px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.users small{font-size:13px;font-weight:500}.av{width:64px;height:64px;border-radius:50%;background:#2a3138;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:var(--amb);flex-shrink:0}.av.small{width:44px;height:44px;font-size:17px}.identity{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.identity-name{flex:1}.identity-name small{display:block;color:var(--mu)}.identity button{font-size:14px;padding:8px 12px}.planning-list,.active-orders,.schedule-list,.stop-list{display:flex;flex-direction:column;gap:12px}.active-orders h2{font-size:17px;color:var(--grn)}.of,.active-card{display:flex;align-items:center;gap:16px;width:100%;text-align:left;padding:18px;background:var(--p);border:2px solid var(--ln);border-radius:14px}.of.sel{border-color:var(--amb);background:#2a2416}.of.ok{border-color:var(--amb);border-style:dashed}.of b,.active-card b{font-size:23px}.order-copy{flex:1;overflow-wrap:anywhere}.description{font-size:17px;font-weight:700;margin:4px 0}.of small{color:var(--mu);font-weight:500;display:block}.quantity{text-align:right;flex-shrink:0}.quantity b{font-size:30px;display:block;line-height:1.15}.active-card{border-color:#28553d;flex-wrap:wrap}.active-card .order-copy{min-width:210px}.counter{display:flex;gap:12px;align-items:center;margin-left:auto}.counter button{width:56px;height:56px;font-size:30px;padding:0}.counter div{text-align:center;min-width:58px}.counter b{font-size:29px;display:block}.counter small{font-size:13px;color:var(--mu);display:block}.empty{padding:34px;text-align:center;border:2px dashed var(--ln);border-radius:14px;color:var(--mu)}.hint{text-align:center;color:var(--mu);padding:16px}.dock{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(transparent,var(--bg) 20%);padding:20px;z-index:2}.dock button{display:block;width:min(924px,100%);margin:auto;min-height:70px;font-size:24px}.run-bar{position:fixed;top:0;left:0;right:0;z-index:4;background:#17251e;border-bottom:2px solid var(--grn);box-shadow:0 4px 18px #0005}.run-bar.paused{background:#282114;border-color:var(--amb)}.bar-inner{max-width:980px;margin:auto;padding:10px clamp(14px,3vw,28px) 8px;display:grid;grid-template-columns:minmax(150px,1fr) auto auto;gap:6px 20px;align-items:center}.bar-orders{display:flex;flex-direction:column;font-size:16px;overflow-wrap:anywhere}.state{color:var(--grn);font-size:13px;font-weight:700}.paused .state{color:var(--amb)}.total-clock{display:flex;flex-direction:column;text-align:center}.total-clock small{font-size:12px;color:var(--mu)}.total-clock b{font-size:30px;line-height:1.2;white-space:nowrap;letter-spacing:.4px}.bar-actions{display:flex;gap:8px}.bar-actions button{min-width:84px}.bar-details{grid-column:1/-1;display:flex;gap:8px 18px;align-items:center;font-size:12px;color:var(--mu);flex-wrap:wrap;min-height:24px}.bar-details b{color:var(--ink);margin-left:3px}.reason-link{border:0;background:transparent;color:var(--amb);font-size:12px;min-height:44px;padding:4px 8px;margin:-8px 0 -4px auto;max-width:45%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.foot{border-top:1px solid var(--ln);padding-top:18px;display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;color:var(--mu);font-size:13px}.foot b{color:var(--ink)}.schedule-card,.stop-card{padding:18px;background:var(--p);border:1px solid var(--ln);border-radius:14px;display:flex;flex-direction:column;gap:16px}.schedule-card .section-title small{color:var(--mu)}.schedule-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.schedule-field>span{display:block;margin-bottom:7px;color:var(--mu);font-size:14px}.stepper{display:flex;align-items:center;gap:10px}.stepper button{flex:1;padding:10px 6px;white-space:nowrap}.stepper small{font-size:12px}.stepper output{font-size:22px;font-weight:800;min-width:64px;text-align:center}.filters{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}.filters label{display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;font-size:14px;color:var(--mu)}input,select{height:50px;background:var(--p);border:2px solid var(--ln);border-radius:10px;padding:8px;width:100%}.filters button{font-size:14px;min-height:50px}.stop-summary{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 18px;border-radius:12px;background:#282114}.stop-summary b{font-size:27px;margin-left:auto}.stop-summary small{width:100%;color:var(--mu);font-size:12px}.stop-card.ongoing{border-color:var(--amb)}.badge{font-size:12px;padding:5px 9px;border-radius:8px;background:#303940;white-space:nowrap}.ongoing .badge{color:var(--amb);background:#342a16}.stop-person{display:flex;flex-wrap:wrap;gap:6px 16px}.stop-person span{color:var(--mu);font-size:14px}.stop-orders{font-size:15px;display:grid;gap:8px}.stop-orders small{display:block;color:var(--mu)}dl{display:flex;gap:12px 24px;flex-wrap:wrap;margin:0}dt{font-size:12px}dd{margin:2px 0 0;font-size:15px}.reason-panel{position:fixed;bottom:0;left:0;right:0;z-index:3;background:#20252a;border-top:2px solid var(--amb);box-shadow:0 -8px 22px #0005;max-height:36vh;max-height:36dvh;overflow:auto;overscroll-behavior:contain}.reason-inner{max-width:980px;margin:auto;padding:12px clamp(14px,3vw,28px) 18px;display:flex;flex-direction:column;gap:10px}.reason-inner h2{font-size:21px}.reason-inner p{font-size:12px}.reason-inner .section-title button{font-size:14px}.reasons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.reasons button{font-size:14px;min-height:54px;padding:8px}.ov{position:fixed;inset:0;z-index:7;background:#050709c9;display:flex;justify-content:center;align-items:center;padding:16px}.md{width:min(650px,100%);max-height:90vh;overflow:auto;padding:24px;border:2px solid var(--ln);border-radius:20px;background:var(--p);display:flex;flex-direction:column;gap:16px}.two{display:flex;gap:12px}.two button{flex:1;min-height:62px}.missing{color:#ff8a8f}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:min(560px,92vw);background:var(--amb);color:#171105;padding:18px;border-radius:14px;z-index:10;font-weight:700;box-shadow:0 4px 20px #0008}
+@media(max-width:650px){.bar-inner{gap:5px 10px;grid-template-columns:minmax(100px,1fr) auto}.bar-actions{grid-column:1/-1}.bar-actions button{flex:1;min-height:44px;padding:7px 12px}.total-clock b{font-size:28px}.bar-details{font-size:11px;gap:5px 10px}.reason-link{margin-left:0;max-width:100%}.schedule-fields{grid-template-columns:1fr}.reasons{grid-template-columns:repeat(2,minmax(0,1fr))}.of{padding:14px;gap:10px}.of b{font-size:21px}.quantity b{font-size:25px}.identity-name{min-width:160px}.shifts button{font-size:14px;padding:10px 4px}.shifts small{font-size:12px}.nav button{font-size:15px}.stop-card .section-title{align-items:flex-start}.filters label{min-width:140px}.lg button{padding:7px 9px}.top h1{font-size:21px}}
+
+
+/* Compact planning: expand an order only when its full dimensions are needed. */
+.w{gap:12px;padding-bottom:calc(24px + var(--reason-h))}.w.has-dock{padding-bottom:115px}.w.with-run{padding-top:calc(var(--run-h) + 12px)}
+.w>.top{gap:8px}.identity{gap:8px}.identity button{min-height:44px}.identity-name{font-size:14px}.identity-name small{font-size:12px}.av.small{width:38px;height:38px;font-size:14px}
+.seg.nav button,.seg.formats button{min-height:44px;padding:8px 10px;font-size:16px}.planning-list,.active-orders{gap:8px}.active-orders h2{font-size:14px}
+.of-card{background:var(--p);border:1px solid var(--ln);border-radius:12px;overflow:hidden}.of-card.sel{border:2px solid var(--amb);background:#2a2416}.of-card.ok{border:1px dashed var(--amb)}.of-row{display:flex;align-items:center}
+.of{border:0;border-radius:0;background:transparent;padding:9px 12px;gap:12px;flex:1}.order-heading{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.of .order-heading b{font-size:18px}.order-heading>span{font-size:12px;color:var(--mu)}.of .description{font-size:13px;font-weight:500;margin:1px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.of small{font-size:11px}.of .quantity b{font-size:24px}.details-button{width:44px;min-height:48px;padding:6px;margin-right:4px;border:0;background:transparent;color:var(--mu);font-size:22px;flex-shrink:0}.of-details{padding:10px 14px;border-top:1px solid var(--ln);font-size:13px;overflow-wrap:anywhere}.of-details div{color:var(--mu);margin-top:4px}.of-details[hidden]{display:none}
+.active-card{padding:10px 12px;gap:10px;border-width:1px}.active-card .order-copy b{font-size:18px}.active-card .order-copy>div{font-size:13px}.active-card .order-copy small{font-size:11px}.quantity-entry{display:flex;align-items:flex-end;gap:10px;margin-left:auto}.quantity-entry label{font-size:11px;color:var(--mu);display:flex;flex-direction:column;gap:3px}.entry-field{display:flex;align-items:center;gap:6px}.entry-field input{width:80px;min-width:0;height:44px;padding:5px;text-align:center;font-size:21px;font-weight:700;color:var(--ink);appearance:textfield;-moz-appearance:textfield}.entry-field input::-webkit-inner-spin-button,.entry-field input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.entry-field>span{font-size:13px;white-space:nowrap}.quantity-entry button{min-height:44px;padding:8px 12px;font-size:16px}.foot{padding-top:10px;gap:6px 14px;font-size:12px}.hint{padding:8px}
+@media(max-width:650px){.of{padding:9px 10px;gap:8px}.of .order-heading b{font-size:17px}.order-heading{gap:5px}.active-card .order-copy{min-width:180px}.quantity-entry{gap:8px}.quantity-entry input{width:70px}.seg.nav button,.seg.formats button{font-size:14px}.quantity-entry button{padding:8px 10px}.identity-name{min-width:140px}}
+.planning-list .formats{grid-template-columns:repeat(4,minmax(0,1fr))}
+.shifts{grid-template-columns:repeat(4,minmax(0,1fr))}
+/* Keep the quantity actions alongside each order on tablet screens. */
+.planning-list{gap:5px}
+.planning-list .of-card{border-radius:9px}
+.planning-list .of-card.sel{border-width:1px;box-shadow:inset 0 0 0 1px var(--amb)}
+.planning-list .of{min-height:48px;gap:8px;padding:5px 8px 5px 10px;line-height:1.2}
+.planning-list .of:focus-visible{outline-offset:-3px}
+.planning-list .order-heading{gap:2px 7px}
+.planning-list .order-heading b{font-size:18px}
+.planning-list .description{font-size:14px;margin:2px 0}
+.planning-list .of small{font-size:12px}
+.planning-list .of .quantity b{font-size:20px}
+.planning-list .details-button{width:44px;min-height:44px;margin-right:0;font-size:19px}
+.of-actions{display:flex;justify-content:flex-end;padding:0 7px 5px}
+.of-actions .quantity-entry{flex-wrap:wrap;justify-content:flex-end;gap:5px}
+.of-actions .quantity-entry button{min-height:44px;padding:5px 8px;font-size:14px;border-radius:8px}
+.quantity-entry button{white-space:nowrap}
+@media(min-width:520px){
+  .of-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+  .of-actions{padding:3px 6px 3px 0}
+  .of-details{grid-column:1/-1}
+}
+@media(520px <= width < 720px){
+  .of-actions:has(input){grid-column:1/-1;padding:0 6px 5px}
+}
+@media(max-width:480px){
+  .quantity-entry{flex-wrap:wrap}
+  .planning-list .formats button{padding-inline:4px}
+}
+/* v3: compact sticky header + run bar, shift validation, three order states, kanban. */
+.fixed-top{position:sticky;top:0;z-index:5;background:var(--bg);box-shadow:0 6px 16px #0007}
+.hdr{max-width:980px;margin:auto;display:flex;align-items:center;gap:6px 8px;flex-wrap:wrap;padding:5px clamp(10px,2.5vw,20px);border-bottom:1px solid var(--ln)}
+.hdr .brand{font-size:14px;font-weight:800;color:var(--amb);white-space:nowrap;margin-right:4px}
+.hdr .spacer{flex:1}
+.hdr .who-mini{flex:1;display:flex;flex-direction:column;line-height:1.15;font-size:14px;min-width:120px}
+.hdr .who-mini small{font-size:11px;color:var(--mu)}
+.hdr button{min-height:40px;padding:5px 10px;font-size:13px;border-radius:9px;border-width:1px}
+.hdr .av.small{width:32px;height:32px;font-size:12px}
+.nav2{display:flex;gap:4px}.nav2 button{min-width:92px}
+.lang-select{height:40px;width:auto;padding:4px 6px;font-size:13px;border-width:1px;border-radius:9px}
+.hdr .lg button{padding:5px 9px;font-size:13px}
+.w,.w.with-run{padding-top:10px}
+.run-bar{position:static;box-shadow:none;border-bottom:0;border-top:2px solid var(--grn)}
+.run-bar.paused{border-color:var(--amb)}
+.bar-inner{display:flex;flex-direction:column;gap:4px;padding:5px clamp(10px,2.5vw,20px) 6px}
+.bar-top{display:flex;align-items:center;gap:4px 14px;flex-wrap:wrap}
+.bar-top .state{font-size:14px}
+.bar-top .total-clock b{font-size:24px;line-height:1.1}
+.bar-times{display:flex;gap:10px;font-size:12px;color:var(--mu)}.bar-times b{color:var(--ink)}
+.bar-top .reason-link{margin:0;min-height:40px;max-width:230px}
+.bar-actions{margin-left:auto;display:flex;gap:6px}.bar-actions button{min-height:44px;min-width:84px;padding:6px 12px}
+.bar-of{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap;padding-top:4px;border-top:1px solid #ffffff14;font-size:13px}
+.bar-of .of-id{font-size:16px;white-space:nowrap}
+.bar-of .meta{flex:1;min-width:160px;color:var(--mu);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-of .entry-field input,.of-form .entry-field input{width:72px;height:40px;font-size:19px}
+.bar-of button{min-height:40px;padding:5px 10px;font-size:13px}
+.users{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.users button{min-height:118px;gap:6px}.users .av{width:52px;height:52px;font-size:18px}
+.shifts{grid-template-columns:repeat(3,minmax(0,1fr))}.shifts button{min-height:62px}
+.schedule-card{gap:12px}.who-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.who-line>div{flex:1}.who-line h2{font-size:19px;color:var(--amb)}
+.field-label{color:var(--mu);font-size:14px;margin-bottom:-6px}
+.schedule-total{text-align:center;font-size:15px;color:var(--mu)}.schedule-total b{color:var(--ink)}
+.validate{min-height:62px;font-size:21px}
+.seg.tabs3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.seg.tabs3 button{min-height:44px;padding:6px 8px;font-size:15px}
+.count{display:inline-block;min-width:24px;padding:1px 6px;border-radius:10px;background:#0005;font-size:12px;margin-left:6px}
+.of-card.running{border-color:var(--grn)}.run-tag{color:var(--grn)}.run-tag.stopped{color:var(--amb)}
+.of-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:6px 12px;margin:0}
+.of-details .of-grid div,.of-grid div{margin:0;color:inherit}.of-grid .wide{grid-column:span 2}.of-grid dt{font-size:11px}.of-grid dd{font-size:14px;margin:1px 0 0;overflow-wrap:anywhere}
+.reason-panel{max-height:64vh;max-height:64dvh}
+.of-forms{display:flex;flex-direction:column;gap:8px}
+.of-form{background:#0003;border:1px solid var(--ln);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.of-form-head{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:14px}.of-form-head span{color:var(--mu)}
+.of-form small{font-size:12px}
+.of-form-fields{display:flex;gap:8px 14px;align-items:flex-end;flex-wrap:wrap}
+.of-form-fields label{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mu)}
+.of-form-fields select{height:44px;min-width:210px;font-size:15px}
+.of-form-fields button{min-height:44px;padding:5px 12px}
+.md.warn{border-color:var(--amb)}.md.warn h2{color:var(--amb)}
+.warn-box{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px 14px;padding:12px;background:#282114;border-radius:10px}
+.kb-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.kb-top h2{flex:1;font-size:19px;min-width:200px}
+.kb-top input{width:auto;height:44px}.kb-top button{min-height:44px;font-size:13px;padding:6px 12px}
+.kb-body{display:flex;flex-direction:column;gap:8px}
+.kb-summary{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0;border:1px solid var(--amb);border-radius:12px;overflow:hidden;gap:0}
+.kb-summary div{padding:8px 10px;background:#2a2416;border-right:1px solid #f5a52433}
+.kb-summary dt{font-size:11px}.kb-summary dd{font-size:17px;font-weight:800;margin:2px 0 0;overflow-wrap:anywhere}
+.kb-list{display:flex;flex-direction:column;gap:8px}
+.kb-card{background:var(--p);border:1px solid var(--ln);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.kb-card.live{border-color:var(--grn)}
+.kb-head{display:flex;gap:4px 10px;align-items:baseline;flex-wrap:wrap}.kb-head b{font-size:17px}.kb-head .desc{flex:1;font-size:14px;min-width:140px}.kb-head .kb-qty{font-size:20px}
+.kb-card.live .badge{color:var(--grn)}
+.kb-times{display:flex;gap:4px 16px;flex-wrap:wrap;font-size:12px;color:var(--mu)}.kb-times b{color:var(--ink);font-size:14px}
+.kb-stops{display:flex;flex-direction:column;gap:4px}
+.kb-label{font-size:12px;color:var(--mu);font-weight:700}.kb-none{font-size:13px}
+.kb-stop{display:flex;gap:4px 12px;flex-wrap:wrap;align-items:center;font-size:13px;padding:5px 8px;border-radius:8px;background:#282114}.kb-stop span{color:var(--mu);flex:1}
+.kb-stop.ongoing{outline:1px solid var(--amb)}
+.run-details{display:flex;flex-direction:column;gap:8px}.run-details .kb-card.paused{border-color:var(--amb)}.run-details .kb-head b{font-size:19px}.run-details .kb-qty{font-size:24px}.run-details .of-grid dd{font-size:16px}
+@media(max-width:720px){.kb-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.kb-summary div{border-bottom:1px solid #f5a52433}.nav2 button{min-width:0}.hdr .brand{display:none}}
+@media(max-width:480px){.shifts button{font-size:14px}.bar-times{width:100%}}
+/* v4: machine header + user menu, OF search, priority, 5 tools, paper-style kanban table, light theme. */
+.hdr{position:relative}
+.hdr .machine{font-size:16px;font-weight:800;color:var(--amb);white-space:nowrap;letter-spacing:.3px}
+.user-btn{display:flex;align-items:center;gap:8px;text-align:left;margin-left:auto;background:transparent;border-color:transparent!important}
+.user-btn .who-mini{flex:0 1 auto}
+.menu{position:absolute;right:clamp(10px,2.5vw,20px);top:calc(100% + 4px);z-index:8;min-width:250px;background:var(--p);border:1px solid var(--ln);border-radius:12px;box-shadow:0 10px 28px #0008;padding:6px;display:flex;flex-direction:column;gap:4px}
+.menu button{text-align:left;min-height:48px!important;font-size:15px!important;border:0!important;background:transparent}
+.menu button:hover,.menu button:focus-visible{background:var(--hover)}
+.menu .menu-row{display:flex;align-items:center;gap:8px;padding:4px 10px;font-size:14px;color:var(--mu)}
+.menu .menu-row select{flex:1}
+.menu hr{border:0;border-top:1px solid var(--ln);margin:2px 0;width:100%}
+.of-card[hidden]{display:none!important}
+.planning-list .formats{grid-template-columns:repeat(6,minmax(0,1fr))}
+.planning-list .formats button{padding-inline:4px;font-size:15px}
+.search{display:flex;gap:8px;align-items:center}
+.search input{height:46px;font-size:18px}
+.search button{min-height:46px;padding:6px 14px}
+.pri{display:inline-block;min-width:34px;text-align:center;padding:1px 6px;border-radius:6px;background:var(--red);color:#fff;font-size:13px;font-weight:800}
+.pri-col{flex:0 0 56px;align-self:stretch;display:flex;align-items:center;justify-content:center;border-radius:8px;background:var(--red);color:#fff;font-size:20px;font-weight:800;margin:-1px 0}
+.pri-col.none{background:transparent;color:var(--mu);border:1px dashed var(--ln);font-size:16px}
+.pri.none{background:transparent;color:var(--mu);border:1px solid var(--ln)}
+.planning-list .description{font-size:18px;font-weight:800;color:var(--ink);white-space:normal;line-height:1.2}
+.of-form .entry-field input{width:80px}
+.of-form-fields .static{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mu)}.of-form-fields .static b{font-size:17px;color:var(--ink);line-height:44px}
+.fin-note{font-size:14px;font-weight:700}.fin-note.disc{color:var(--amb)}.fin-note.part{color:var(--grn)}
+.of-card.partial{border-color:var(--grn);border-style:dashed}
+.kb-filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.kb-filters .seg{display:flex;gap:4px}.kb-filters .seg button{min-height:44px;padding:6px 12px;font-size:14px}
+.kb-summary{grid-template-columns:repeat(5,minmax(0,1fr))}
+.kb-table-wrap{overflow-x:auto;border:1px solid var(--ln);border-radius:10px;-webkit-overflow-scrolling:touch}
+.kb-table{border-collapse:collapse;width:100%;min-width:720px;font-size:12px}
+.kb-table th{position:sticky;top:0;background:var(--th);color:var(--mu);font-size:10px;text-transform:uppercase;letter-spacing:.2px;text-align:left;padding:6px 5px;border-bottom:1px solid var(--ln);white-space:nowrap}
+.kb-table td{padding:6px 5px;border-bottom:1px solid var(--ln);vertical-align:top}
+.kb-table tr.live td{background:var(--live)}
+.kb-table td.num{text-align:right;white-space:nowrap}
+.kb-table td.model{font-weight:700;min-width:120px}.kb-table td.nw{white-space:nowrap}
+.kb-table .stops{min-width:96px}.kb-table .stops div{font-size:11px;line-height:1.25}.kb-table .stops b{margin-left:4px}
+.kb-table tfoot td{font-weight:800;background:var(--th)}
+:root{--hover:#ffffff10;--th:#1d2328;--live:#16261e}
+:root[data-theme="light"]{color-scheme:light;--bg:#f3f4f6;--p:#ffffff;--ln:#cfd5db;--ink:#14181c;--mu:#56616b;--amb:#c77c00;--grn:#13864b;--red:#c52f37;--hover:#0000000b;--th:#eceff2;--live:#e6f5ec}
+:root[data-theme="light"] .run-bar{background:#e8f5ee}
+:root[data-theme="light"] .run-bar.paused{background:#fff4df}
+:root[data-theme="light"] .reason-panel{background:#ffffff}
+:root[data-theme="light"] .of-card.sel,:root[data-theme="light"] .of.sel{background:#fff6e5}
+:root[data-theme="light"] .av{background:#e2e6ea}
+:root[data-theme="light"] .badge{background:#e2e6ea}
+:root[data-theme="light"] .ov{background:#0f121599}
+:root[data-theme="light"] .warn-box,:root[data-theme="light"] .kb-stop,:root[data-theme="light"] .stop-summary{background:#fff4df}
+:root[data-theme="light"] .kb-summary div{background:#fff6e5}
+:root[data-theme="light"] .of-form{background:#f6f7f9}
+:root[data-theme="light"] .count{background:#0000001a}
+:root[data-theme="light"] .fixed-top{box-shadow:0 4px 12px #0002}
+:root[data-theme="light"] .menu{box-shadow:0 10px 28px #0003}
+:root[data-theme="light"] button.on,:root[data-theme="light"] .a{color:#fff}
+:root[data-theme="light"] .bar-of{border-top-color:#0000001a}
+@media(max-width:720px){.planning-list .formats{grid-template-columns:repeat(3,minmax(0,1fr))}.hdr .machine{font-size:14px}.user-btn .who-mini small{display:none}}
+</style>
+</head>
+<body>
+<div id="app"></div><div id="ov"></div><div id="toast" role="status"></div>
+<script>
+{
+const T={
+pt:{gui:"Guilhotina 9M",who:"Quem é?",back:"Voltar",M:"Manhã",T:"Tarde",N:"Noite",todo:"Por cortar",done:"Cortadas",pcs:"peças",tap:"Toque numa OF",start:"Iniciar",start2:"Iniciar as 2",same:"Mesma chapa",cutting:"A cortar",stopped:"Parado",stop:"Parar",resume:"Retomar",finish:"Acabar",why:"Porque parou?",cancel:"Cancelar",fin:"Acabar de vez?",finT:"A OF fecha e não volta a abrir.",miss:"Faltam",yes:"Sim, acabar",again:"Esta OF já foi cortada. Cortar outra vez?",againY:"Cortar outra vez",diff:"Chapa diferente. Não dá para juntar.",max:"No máximo 2 OF.",out:"Sair",busy:"Acabe a OF antes de sair.",today:"Hoje",prod:"a cortar",stopT:"parado",empty:"Nada aqui.",recut:"Recorte",
+rs:["Falta de material","Setup / troca de ferramenta","Avaria","Manutenção","Pausa / refeição","Limpeza","Qualidade","Outro"]},
+en:{gui:"Guillotine 9M",who:"Who are you?",back:"Back",M:"Morning",T:"Afternoon",N:"Night",todo:"To cut",done:"Cut",pcs:"pieces",tap:"Tap an order",start:"Start",start2:"Start both",same:"Same sheet",cutting:"Cutting",stopped:"Stopped",stop:"Stop",resume:"Resume",finish:"Finish",why:"Why did you stop?",cancel:"Cancel",fin:"Finish for good?",finT:"The order closes and cannot reopen.",miss:"Missing",yes:"Yes, finish",again:"This order was already cut. Cut again?",againY:"Cut again",diff:"Different sheet. Cannot join.",max:"2 orders at most.",out:"Log out",busy:"Finish the order before leaving.",today:"Today",prod:"cutting",stopT:"stopped",empty:"Nothing here.",recut:"Re-cut",
+rs:["No material","Setup / tool change","Breakdown","Maintenance","Break / meal","Cleaning","Quality","Other"]},
+pa:{gui:"ਗਿਲੋਟੀਨ 9M",who:"ਤੁਸੀਂ ਕੌਣ ਹੋ?",back:"ਵਾਪਸ",M:"ਸਵੇਰ",T:"ਦੁਪਹਿਰ",N:"ਰਾਤ",todo:"ਕੱਟਣਾ ਬਾਕੀ",done:"ਕੱਟੇ ਗਏ",pcs:"ਪੀਸ",tap:"ਕਿਸੇ OF 'ਤੇ ਦਬਾਓ",start:"ਸ਼ੁਰੂ ਕਰੋ",start2:"ਦੋਵੇਂ ਸ਼ੁਰੂ ਕਰੋ",same:"ਉਹੀ ਸ਼ੀਟ",cutting:"ਕਟਾਈ ਚੱਲ ਰਹੀ",stopped:"ਰੁਕਿਆ",stop:"ਰੋਕੋ",resume:"ਮੁੜ ਸ਼ੁਰੂ",finish:"ਖਤਮ ਕਰੋ",why:"ਤੁਸੀਂ ਕਿਉਂ ਰੁਕੇ?",cancel:"ਰੱਦ ਕਰੋ",fin:"ਪੱਕਾ ਖਤਮ ਕਰਨਾ ਹੈ?",finT:"OF ਬੰਦ ਹੋ ਜਾਵੇਗਾ, ਮੁੜ ਨਹੀਂ ਖੁੱਲ੍ਹੇਗਾ।",miss:"ਘੱਟ",yes:"ਹਾਂ, ਖਤਮ ਕਰੋ",again:"ਇਹ OF ਪਹਿਲਾਂ ਕੱਟਿਆ ਗਿਆ। ਦੁਬਾਰਾ ਕੱਟਣਾ ਹੈ?",againY:"ਦੁਬਾਰਾ ਕੱਟੋ",diff:"ਵੱਖਰੀ ਸ਼ੀਟ। ਇਕੱਠੇ ਨਹੀਂ ਹੋ ਸਕਦੇ।",max:"ਵੱਧ ਤੋਂ ਵੱਧ 2 OF।",out:"ਬਾਹਰ",busy:"ਬਾਹਰ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ OF ਖਤਮ ਕਰੋ।",today:"ਅੱਜ",prod:"ਕਟਾਈ",stopT:"ਰੁਕਿਆ",empty:"ਇੱਥੇ ਕੁਝ ਨਹੀਂ।",recut:"ਦੁਬਾਰਾ",
+rs:["ਸਮੱਗਰੀ ਦੀ ਘਾਟ","ਟੂਲ ਬਦਲਣਾ","ਮਸ਼ੀਨ ਖਰਾਬ","ਮੁਰੰਮਤ","ਬ੍ਰੇਕ / ਖਾਣਾ","ਸਫਾਈ","ਗੁਣਵੱਤਾ","ਹੋਰ"]}};
+const LANGS=[["pt","PT"],["en","EN"],["pa","ਪੰਜਾਬੀ"]];
+const USERS=[["u1","F. Pimentel","M","1021"],["u2","Gurpreet S.","M","1034"],["u3","J. Costa","M","1047"],["u4","R. Moreira","M","1052"],["u5","Harjit K.","T","1066"],["u6","A. Ferreira","T","1071"],["u7","Manpreet S.","N","1088"],["u8","P. Sousa","N","1093"]];
+const FMT=[["CONI10","CONI 10"],["CONI12","CONI 12"],["CONI14","CONI 14"],["CONI16","CONI 16"],["OCT","OCT"]];
+// Real orders: open lines of the current plan (Drive "MTG | Kanban Digital" / plan_colunas_cpis.xlsx, 16/11/2026) routed to Guilhotina 9m.
+// Tool derived from plan geometry: OCT models (CxO…, CD..P) or taper (dbase-dtopo)/comp ≈ 10 / 12 / 14 / 16 mm/m.
+// Priority (TRN, e.g. "C3") and delivery date are not in this export: they stay empty until the CPIs sheet with TRN is available.
+const OF0=[
+["257179", "OCT", "", "MTG", "CAO8E08B - 2º PRIORIDADE - 300ud", 332, 0, "", "S355J2", 2.6, 641, 203, 844, 8720, "250010", "GUIFIL"],
+["264983", "CONI14", "", "RESUL", "CFC5F08R", 116, 0, "", "S355J2", 2.6, 532, 180, 712, 8000, "2606596", "GUIFIL", "C3"],
+["264670", "CONI14", "", "MTG BELUX", "CBCAE06DI_V - 2 SC + BRACO", 1, 0, "", "S355J2", 2.6, 504, 193, 696, 7100, "2605364", "GUIFIL"],
+["264946", "OCT", "", "ENEDIS", "CD02P09B - CD02P501 + SUP DEGRAUS + FURACAO + TAMPA TOPO", 2, 0, "", "S500MC", 3.0, 646, 301, 947, 9000, "2606454", "GUIFIL"],
+["254858", "OCT", "", "STOCK EDP", "CAO8E08B", 1, 0, "", "S355J2", 2.6, 641, 203, 844, 8720, "2508074", "GUIFIL"],
+["264641", "CONI14", "", "RENNES METROPOLE", "CFC5F09RI", 3, 0, "", "S355J2", 2.6, 576, 180, 756, 9000, "2606069", "GUIFIL"],
+["265124", "CONI14", "", "PETITJEAN", "OMEGA607MABI", 169, 0, "", "S235JR", 2.6, 479, 180, 659, 7000, "2606711", "GUIFIL"],
+["264879", "CONI16", "", "MTG BELUX", "CR17LF07 - CR1716A4502 + CH ID - TOPO", 20, 0, "", "S355J0", 3.0, 779, 318, 1097, 9000, "2605886", "GUIFIL"],
+["264692", "CONI14", "", "MTG BELUX", "CBC9E06DI - 2 SC", 2, 0, "", "S355J2", 2.6, 513, 187, 700, 7100, "2606139", "GUIFIL"],
+["265226", "CONI14", "", "MTG BELUX", "CBC9E06DI - 2 SC", 15, 0, "", "S355J2", 2.6, 513, 187, 700, 7100, "2606797", "GUIFIL"],
+["264837", "CONI14", "", "STOCK MTG FRANCE", "CLC8F08RI", 90, 0, "", "S275JR", 3.0, 531, 179, 710, 8000, "2604051", "GUIFIL"],
+["264826", "CONI14", "", "STOCK MTG FRANCE", "CLC8F09RI", 30, 0, "", "S275JR", 3.0, 575, 179, 754, 9000, "2604051", "GUIFIL"],
+["264642", "CONI14", "", "CITEOS OMEXOM", "CFC2F08RI", 4, 0, "", "S275JR", 3.0, 581, 229, 810, 8000, "2605725", "GUIFIL"],
+["263815", "CONI10", "", "STOCK MTG GMBH", "CGC2E06DI", 1000, 0, "", "S355J2", 2.6, 450, 230, 681, 7000, "2604808", "GUIFIL"],
+["264606", "CONI14", "", "SAS GAGNERAUD", "CLCEF08R", 2, 0, "", "S275JR", 4.0, 534, 182, 716, 8000, "2606071", "GUIFIL"],
+["264975", "CONI14", "", "FONROCHE", "CFC3F05R_V", 1, 0, "", "S355J2", 4.0, 446, 226, 672, 5000, "2606609", "GUIFIL"],
+["264684", "CONI14", "", "SECAB", "5772VF01_8M - 5772V500 - 8M", 2, 0, "", "S355J0", 4.0, 578, 226, 804, 8000, "2605772", "GUIFIL"],
+["264850", "CONI14", "", "LE HAVRE", "CFH2F09RI - BASE INOX  - TOPO", 1, 0, "", "S355J0", 4.0, 604, 226, 830, 8600, "2606073", "GUIFIL"],
+["264518", "CONI14", "", "FABRIKAT", "9200_4 - BC007620509200C040", 110, 0, "", "S355JR", 4.0, 631, 226, 857, 9200, "2605631", "GUIFIL"],
+["265196", "CONI10", "", "DAV NORDIC", "CLC7F07D", 30, 0, "", "S355J2", 2.6, 400, 180, 580, 7000, "2606630", "GUIFIL"],
+["265197", "CONI10", "", "DAV NORDIC", "CLC7F07R", 40, 0, "", "S355J2", 2.6, 400, 180, 580, 7000, "2606630", "GUIFIL"],
+["265198", "CONI10", "", "DAV NORDIC", "CLC7F08D", 60, 0, "", "S355J2", 2.6, 431, 180, 612, 8000, "2606630", "GUIFIL"],
+["265199", "CONI10", "", "DAV NORDIC", "CLC7F09R", 80, 0, "", "S355J2", 2.6, 463, 180, 643, 9000, "2606630", "GUIFIL"],
+["265061", "CONI10", "", "TECPOLES GMBH", "36044617 - 0641S516 + 2 PORTAS + 2 SC + FURACAO + SEM MARCACAO", 16, 0, "", "S355JR", 2.6, 516, 281, 797, 7500, "2305032", "GUIFIL"],
+["264992", "CONI16", "", "LICHT NL", "5295VP31 - CRS Nº3 9785S500 1/2", 4, 0, "", "S275JR", 4.0, 916, 735, 1651, 7430, "2605295", "GUIFIL"],
+["265207", "CONI12", "", "GARCZYNSKI", "CLC6F07R_V", 1, 0, "", "S355J2", 2.6, 444, 180, 624, 7000, "2606725", "GUIFIL"],
+["265232", "CONI12", "", "MTG BELUX", "CBC9F08DI - FL PL", 20, 0, "", "S355J2", 2.6, 501, 187, 687, 8100, "2606590", "GUIFIL"],
+["265283", "CONI12", "", "MTG BELUX", "CBC9F08DI - FL PL - RECLAMACAO", 20, 0, "", "S355J2", 2.6, 501, 187, 687, 8100, "2605438", "GUIFIL"],
+["265047", "CONI12", "", "PETITJEAN", "6220VF01 - 6220V601 + CUTELOS + FL PL", 47, 0, "", "S235JR", 4.0, 606, 267, 873, 9015, "2606220", "GUIFIL"],
+["257022", "CONI14", "", "RESO", "CLC8F08RI_V2 - USAR MATERIAL STOCK", 1, 0, "", "S275JR", 3.0, 531, 179, 710, 8000, "2511332", "GUIFIL"],
+["265190", "OCT", "", "DAV NORDIC", "CAO6F18D - TOPO", 50, 0, "", "S275JR", 3.0, 636, 238, 874, 8000, "2606635", "GUIFIL"]
+].map(a=>({of:a[0],fmt:a[1],cart:a[2],client:a[3],desc:a[4],plan:a[5],made:a[6],due:a[7],mat:a[8],esp:a[9],lb:a[10],lt:a[11],ltot:a[12],comp:a[13],ov:a[14],dest:a[15],pri:a[16]||"",state:"todo"}));
+// Each segment records actual elapsed time; rendering never advances the counters.
+const EXTRA = {
+  pt: {planning:"Planeamento",stops:"Ver Paragens",schedules:"Horários",entry:"Entrada",exit:"Saída",nextDay:"dia seguinte",saved:"Guardado automaticamente neste dispositivo",equalTime:"A entrada e a saída têm de ser diferentes.",total:"Tempo total",production:"Produção",downtime:"Paragem",active:"Em execução",pendingReason:"Motivo por indicar",chooseReason:"Escolher motivo",closePanel:"Fechar menu",reasonHint:"A paragem já está a contar. Fechar este menu não retoma o trabalho.",allUsers:"Todos os colaboradores",allDates:"Todas as datas",date:"Data",worker:"Colaborador",shiftLabel:"Turno",from:"Início",until:"Fim",duration:"Duração",inProgress:"Em curso",ended:"Terminada",reason:"Motivo",unknownSchedule:"Turno / horário não registado",stopSum:"Tempo de paragem",stopSumDate:"Tempo de paragem nesta data",inDate:"Nesta data",noStops:"Sem paragens para estes filtros.",localOnly:"Registos deste browser",resetFilters:"Limpar filtros",runFirst:"Existe um trabalho em curso. Pode continuar a consultar o planeamento.",less:"Menos 30 minutos",more:"Mais 30 minutos",storageError:"Não foi possível guardar os dados neste browser. Mantenha esta página aberta.",savedAtEnd:"A contagem termina ao confirmar.",minute:"min",scheduleHelp:"Predefinições por colaborador. Os registos anteriores mantêm o horário original.",orders:"Ordens de fabrico"},
+  en: {planning:"Planning",stops:"View stops",schedules:"Schedules",entry:"Start",exit:"End",nextDay:"next day",saved:"Saved automatically on this device",equalTime:"Start and end must be different.",total:"Total time",production:"Production",downtime:"Stopped",active:"In progress",pendingReason:"Reason not selected",chooseReason:"Choose reason",closePanel:"Close menu",reasonHint:"Stop time is already counting. Closing this menu does not resume work.",allUsers:"All workers",allDates:"All dates",date:"Date",worker:"Worker",shiftLabel:"Shift",from:"Started",until:"Ended",duration:"Duration",inProgress:"Ongoing",ended:"Completed",reason:"Reason",unknownSchedule:"Shift / schedule not recorded",stopSum:"Stop time",stopSumDate:"Stop time on this date",inDate:"On this date",noStops:"No stops match these filters.",localOnly:"Records in this browser",resetFilters:"Clear filters",runFirst:"Work is already in progress. You can still browse the plan.",less:"30 minutes earlier",more:"30 minutes later",storageError:"Could not save data in this browser. Keep this page open.",savedAtEnd:"Time stops when you confirm.",minute:"min",scheduleHelp:"Defaults for each worker. Earlier records keep their original schedule.",orders:"Work orders"},
+  pa: {planning:"ਕੰਮ ਦੀ ਯੋਜਨਾ",stops:"ਰੁਕਾਵਟਾਂ ਵੇਖੋ",schedules:"ਕੰਮ ਦੇ ਸਮੇਂ",entry:"ਸ਼ੁਰੂਆਤ",exit:"ਸਮਾਪਤੀ",nextDay:"ਅਗਲਾ ਦਿਨ",saved:"ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਆਪਣੇ ਆਪ ਸੁਰੱਖਿਅਤ",equalTime:"ਸ਼ੁਰੂ ਅਤੇ ਸਮਾਪਤੀ ਦਾ ਸਮਾਂ ਵੱਖਰਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",total:"ਕੁੱਲ ਸਮਾਂ",production:"ਉਤਪਾਦਨ",downtime:"ਰੁਕਾਵਟ",active:"ਕੰਮ ਜਾਰੀ ਹੈ",pendingReason:"ਕਾਰਨ ਅਜੇ ਨਹੀਂ ਚੁਣਿਆ",chooseReason:"ਕਾਰਨ ਚੁਣੋ",closePanel:"ਮੀਨੂ ਬੰਦ ਕਰੋ",reasonHint:"ਰੁਕਾਵਟ ਦਾ ਸਮਾਂ ਗਿਣਿਆ ਜਾ ਰਿਹਾ ਹੈ। ਮੀਨੂ ਬੰਦ ਕਰਨ ਨਾਲ ਕੰਮ ਮੁੜ ਸ਼ੁਰੂ ਨਹੀਂ ਹੁੰਦਾ।",allUsers:"ਸਾਰੇ ਕਰਮਚਾਰੀ",allDates:"ਸਾਰੀਆਂ ਤਾਰੀਖਾਂ",date:"ਤਾਰੀਖ",worker:"ਕਰਮਚਾਰੀ",shiftLabel:"ਸ਼ਿਫਟ",from:"ਸ਼ੁਰੂ",until:"ਖਤਮ",duration:"ਮਿਆਦ",inProgress:"ਜਾਰੀ ਹੈ",ended:"ਮੁਕੰਮਲ",reason:"ਕਾਰਨ",unknownSchedule:"ਸ਼ਿਫਟ / ਸਮਾਂ ਦਰਜ ਨਹੀਂ ਕੀਤਾ",stopSum:"ਰੁਕਾਵਟ ਦਾ ਸਮਾਂ",stopSumDate:"ਇਸ ਤਾਰੀਖ ਦੀ ਰੁਕਾਵਟ ਦਾ ਸਮਾਂ",inDate:"ਇਸ ਤਾਰੀਖ ਨੂੰ",noStops:"ਇਨ੍ਹਾਂ ਫਿਲਟਰਾਂ ਲਈ ਕੋਈ ਰੁਕਾਵਟ ਨਹੀਂ।",localOnly:"ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਰਿਕਾਰਡ",resetFilters:"ਫਿਲਟਰ ਹਟਾਓ",runFirst:"ਕੰਮ ਪਹਿਲਾਂ ਹੀ ਜਾਰੀ ਹੈ। ਤੁਸੀਂ ਯੋਜਨਾ ਵੇਖ ਸਕਦੇ ਹੋ।",less:"30 ਮਿੰਟ ਪਹਿਲਾਂ",more:"30 ਮਿੰਟ ਬਾਅਦ",storageError:"ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਡਾਟਾ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੋਇਆ। ਪੰਨਾ ਖੁੱਲ੍ਹਾ ਰੱਖੋ।",savedAtEnd:"ਪੁਸ਼ਟੀ ਕਰਨ ਉੱਤੇ ਸਮਾਂ ਰੁਕਦਾ ਹੈ।",minute:"ਮਿੰਟ",scheduleHelp:"ਹਰੇਕ ਕਰਮਚਾਰੀ ਲਈ ਨਿਰਧਾਰਤ ਸਮਾਂ। ਪੁਰਾਣੇ ਰਿਕਾਰਡਾਂ ਵਿੱਚ ਅਸਲ ਸਮਾਂ ਰਹੇਗਾ।",orders:"ਕੰਮ ਦੇ ਆਰਡਰ"}
+};
+const QUANTITY_TEXT = {
+  pt:{produced:"Produzidas",fullQuantity:"Preencher a quantidade planeada",invalidQuantity:"Escreva uma quantidade inteira, igual ou superior a zero.",details:"Detalhes da OF"},
+  en:{produced:"Produced",fullQuantity:"Fill the planned quantity",invalidQuantity:"Enter a whole quantity of zero or more.",details:"Order details"},
+  pa:{produced:"ਬਣਾਏ ਗਏ",fullQuantity:"ਯੋਜਨਾ ਅਨੁਸਾਰ ਪੂਰੀ ਮਾਤਰਾ ਭਰੋ",invalidQuantity:"ਜ਼ੀਰੋ ਜਾਂ ਇਸ ਤੋਂ ਵੱਧ ਪੂਰੀ ਗਿਣਤੀ ਲਿਖੋ।",details:"ਆਰਡਰ ਦਾ ਵੇਰਵਾ"}
+};
+const PLANNING_TEXT={
+  pt:{allFormats:"Todos",mySchedule:"Meu horário",switchWorker:"Trocar colaborador",editQuantity:"Editar quantidade",noPending:"Sem OFs por cortar",noCompleted:"Sem OFs cortadas"},
+  en:{allFormats:"All",mySchedule:"My schedule",switchWorker:"Switch worker",editQuantity:"Edit quantity",noPending:"No orders to cut",noCompleted:"No cut orders"},
+  pa:{allFormats:"ਸਾਰੇ",mySchedule:"ਮੇਰਾ ਸਮਾਂ",switchWorker:"ਕਰਮਚਾਰੀ ਬਦਲੋ",editQuantity:"ਮਾਤਰਾ ਬਦਲੋ",noPending:"ਕੱਟਣ ਲਈ ਕੋਈ ਆਰਡਰ ਨਹੀਂ",noCompleted:"ਕੱਟਿਆ ਕੋਈ ਆਰਡਰ ਨਹੀਂ"}
+};
+for (const lang of Object.keys(T)) Object.assign(T[lang], EXTRA[lang], QUANTITY_TEXT[lang], PLANNING_TEXT[lang]);
+const SHIFTS = {M:{start:420,end:900},T:{start:900,end:1380},N:{start:1380,end:420}};
+const KEY = "mtg-gui-simple-v1";
+const $ = id => document.getElementById(id);
+const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2,"0");
+const localDay = (value=Date.now()) => {const d=new Date(value);return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;};
+const shiftNow = () => {const h=new Date().getHours();return h>=7&&h<15?"M":h>=15&&h<23?"T":"N";};
+const uid = () => globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+const hms = sec => {sec=Math.max(0,Math.floor(sec));return `${pad(Math.floor(sec/3600))}:${pad(Math.floor(sec%3600/60))}:${pad(sec%60)}`;};
+const hm = minutes => `${pad(Math.floor(minutes/60))}:${pad(minutes%60)}`;
+const ini = name => name.replace(/\./g,"").split(" ").map(x=>x[0]).join("").slice(0,2);
+const fresh = () => ({version:2,lang:"pt",screen:"who",page:"plan",shift:shiftNow(),uid:null,fmt:"all",tab:"todo",sel:[],run:null,modal:null,rid:null,stopPanel:false,ofs:OF0.map(o=>({...o})),log:[],schedules:Object.fromEntries(USERS.map(u=>[u[0],{...SHIFTS[u[2]],shift:u[2]}])),filters:{date:"",user:""}});
+const reasonIndex = text => {for(const language of Object.values(T)){const i=language.rs.indexOf(text);if(i!==-1)return i;}return null;};
+const logUser = log => log.uid || log.k?.split("|")[0] || "";
+const orderSnapshot = (ids, orders) => ids.map(id=>{const o=orders.find(o=>o.of===id);return {of:id,client:o?.client||"",desc:o?.desc||""};});
+
+const MACHINES=["QUINADORA GUIFIL","GUILHOTINA 6M","GUILHOTINA 10M","GEMINI HD36","LASER","LASER MTG3","LINHA DE CORTE","GASPARINI","BOBINE FORMATO","EXPEDIÇÃO"];
+const SETUP_REASON=1;
+const NEW={
+  pt:{todo:"Por iniciar",run:"Em curso",done:"Feitas",noPending:"Sem OFs por iniciar",noRun:"Sem OFs em curso",noCompleted:"Sem OFs feitas",kanban:"Kanban",validate:"Validar horário",shiftQ:"Em que turno está?",scheduleIntro:"Confirme o turno e ajuste a entrada e a saída antes de começar.",switchShort:"Trocar",
+    f:{fmt:"Ferramenta",cart:"Carrinho",client:"Cliente",ov:"OV Nº",of:"OF Nº",desc:"Designação",plan:"Qtd. plan.",made:"Qtd. prod.",due:"Data entr.",esp:"Espessura",mat:"Material",lb:"LBase",lt:"LTopo",ltot:"LTotal",comp:"Comp",dest:"Destino"},
+    nextMachine:"Máquina seguinte",qtyProduced:"Qtd. produzida",operatorName:"Nome do operador",operatorNo:"Nº de operador",prodTime:"Tempo de produção",stopTime:"Tempo de paragem",setupTime:"Tempo de setup",noKanban:"Sem OFs registadas nesta data.",started:"Início",ended:"Fim",stopsOf:"Paragens",noStopsOf:"Sem paragens nesta OF",shared:"Tempo partilhado com",machineStopTitle:"Há uma paragem nesta máquina",machineStopText:"A máquina está parada. Retome ou acabe a OF em curso antes de escolher outra.",since:"Desde",by:"Operador",resumeNow:"Retomar agora",close:"Fechar",ofInfo:"Dados da OF",live:"Em curso",finished:"Feita",setupHint:"Setup = paragens por “Setup / troca de ferramenta”.",todayBtn:"Hoje",allDatesBtn:"Todas"},
+  en:{todo:"Not started",run:"In progress",done:"Done",noPending:"No orders to start",noRun:"No orders in progress",noCompleted:"No finished orders",kanban:"Kanban",validate:"Confirm schedule",shiftQ:"Which shift are you on?",scheduleIntro:"Confirm your shift and adjust start and end before you begin.",switchShort:"Switch",
+    f:{fmt:"Tool",cart:"Cart",client:"Customer",ov:"SO No.",of:"WO No.",desc:"Description",plan:"Planned qty",made:"Produced qty",due:"Due date",esp:"Thickness",mat:"Material",lb:"LBase",lt:"LTop",ltot:"LTotal",comp:"Length",dest:"Destination"},
+    nextMachine:"Next machine",qtyProduced:"Produced qty",operatorName:"Operator name",operatorNo:"Operator no.",prodTime:"Production time",stopTime:"Stop time",setupTime:"Setup time",noKanban:"No orders recorded on this date.",started:"Start",ended:"End",stopsOf:"Stops",noStopsOf:"No stops on this order",shared:"Time shared with",machineStopTitle:"This machine is stopped",machineStopText:"The machine is stopped. Resume or finish the current order before choosing another.",since:"Since",by:"Operator",resumeNow:"Resume now",close:"Close",ofInfo:"Order data",live:"In progress",finished:"Done",setupHint:"Setup = stops marked “Setup / tool change”.",todayBtn:"Today",allDatesBtn:"All"},
+  pa:{todo:"ਸ਼ੁਰੂ ਨਹੀਂ ਹੋਏ",run:"ਚੱਲ ਰਹੇ",done:"ਪੂਰੇ ਹੋਏ",noPending:"ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਕੋਈ ਆਰਡਰ ਨਹੀਂ",noRun:"ਕੋਈ ਆਰਡਰ ਨਹੀਂ ਚੱਲ ਰਿਹਾ",noCompleted:"ਕੋਈ ਪੂਰਾ ਆਰਡਰ ਨਹੀਂ",kanban:"ਕਾਨਬਾਨ",validate:"ਸਮਾਂ ਪੱਕਾ ਕਰੋ",shiftQ:"ਤੁਹਾਡੀ ਸ਼ਿਫਟ ਕਿਹੜੀ ਹੈ?",switchShort:"ਬਦਲੋ",nextMachine:"ਅਗਲੀ ਮਸ਼ੀਨ",qtyProduced:"ਬਣਾਏ ਗਏ",machineStopTitle:"ਇਸ ਮਸ਼ੀਨ 'ਤੇ ਰੁਕਾਵਟ ਹੈ",resumeNow:"ਹੁਣੇ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ",close:"ਬੰਦ ਕਰੋ",live:"ਚੱਲ ਰਿਹਾ",todayBtn:"ਅੱਜ",allDatesBtn:"ਸਾਰੇ"}
+};
+for(const lang of Object.keys(T)){Object.assign(T[lang],NEW.pt,NEW[lang]);T[lang].f={...NEW.pt.f,...(NEW[lang].f||{})};}
+const APP_VERSION="2026-11-16.6";
+const NEXT_MACHINE="GUIFIL",DISCARD_MAX=20;
+const NEW4={
+  pt:{gui:"GUILHOTINA 9M",fin:"Acabar OF?",yes:"Acabar",searchOf:"Pesquisar OF",clear:"Limpar",noMatch:"Nenhuma OF com este número.",discarded:"descartadas",staysRun:"fica em curso",discardToast:"OF {of}: faltam {n} — descartadas.",partialToast:"OF {of}: faltam {n} — fica em curso.",changeSchedule:"Mudar horário",logout:"Sair",themeLight:"Tema claro",themeDark:"Tema escuro",fullscreen:"Ecrã inteiro",exitFullscreen:"Sair de ecrã inteiro",language:"Idioma",allShifts:"Todos",prevShift:"Turno anterior",shiftLabel:"Turno",
+    f:{pri:"Prioridade",client:"Cliente",of:"OF Nº",desc:"Designação",plan:"Qtd.",made:"Qtd. prod.",due:"Data entr.",fmt:"Ferramenta",esp:"Espessura",lb:"LBase",lt:"LTopo",ltot:"LTotal",comp:"Comp",cutW:"Largura de corte",cutL:"Comp. corte bobine",mat:"Material",dest:"Máquina seguinte",cart:"Carrinho"},
+    k:{pri:"PRI",client:"Cliente",of:"OF",model:"Modelo",qty:"Qtd",comp:"Comp",coni:"CONI",esp:"Esp",lb:"LBase",lt:"LTopo",start:"Início",end:"Fim",prod:"Produção",stops:"Paragens"}},
+  en:{gui:"GUILLOTINE 9M",fin:"Finish order?",yes:"Finish",searchOf:"Search order",clear:"Clear",noMatch:"No order with this number.",discarded:"discarded",staysRun:"stays in progress",discardToast:"Order {of}: {n} missing — discarded.",partialToast:"Order {of}: {n} missing — stays in progress.",changeSchedule:"Change schedule",logout:"Log out",themeLight:"Light theme",themeDark:"Dark theme",fullscreen:"Full screen",exitFullscreen:"Exit full screen",language:"Language",allShifts:"All",prevShift:"Previous shift",shiftLabel:"Shift",
+    f:{pri:"Priority",client:"Customer",of:"WO No.",desc:"Description",plan:"Qty",made:"Produced",due:"Due date",fmt:"Tool",esp:"Thickness",lb:"LBase",lt:"LTop",ltot:"LTotal",comp:"Length",cutW:"Cut width",cutL:"Coil cut length",mat:"Material",dest:"Next machine",cart:"Cart"},
+    k:{pri:"PRI",client:"Customer",of:"WO",model:"Model",qty:"Qty",comp:"Length",coni:"CONI",esp:"Thk",lb:"LBase",lt:"LTop",start:"Start",end:"End",prod:"Production",stops:"Stops"}},
+  pa:{gui:"ਗਿਲੋਟੀਨ 9M",fin:"OF ਖਤਮ ਕਰਨਾ ਹੈ?",yes:"ਖਤਮ ਕਰੋ",searchOf:"OF ਲੱਭੋ",logout:"ਬਾਹਰ",language:"ਭਾਸ਼ਾ"}
+};
+for(const lang of Object.keys(T)){const own=NEW4[lang]||{};Object.assign(T[lang],NEW4.pt,own);T[lang].f={...T[lang].f,...NEW4.pt.f,...(own.f||{})};T[lang].k={...NEW4.pt.k,...(own.k||{})};}
+const fill=(text,values)=>text.replace(/\{(\w+)\}/g,(_,k)=>values[k]??"");
+const priKey=p=>{const m=/^([A-Za-z]*)\s*(\d+)?/.exec(String(p||"").trim());return p?[m[1].toUpperCase(),m[2]?+m[2]:Infinity]:["~",Infinity];};
+const byPriority=(a,b)=>{const x=priKey(a.pri),y=priKey(b.pri);return x[0]<y[0]?-1:x[0]>y[0]?1:x[1]-y[1]||ORDER_INDEX(a)-ORDER_INDEX(b);};
+const ORDER_INDEX=o=>{const i=OF0.findIndex(b=>b.of===o.of);return i<0?1e6:i;};
+const runBase=id=>S.run?.base?.[id]??0;
+const locale=()=>S.lang==="pt"?"pt-PT":S.lang==="pa"?"pa-IN":"en-GB";
+const fmtName=o=>FMT.find(([id])=>id===o.fmt)?.[1]||o.fmt||"—";
+
+function migrate(raw){
+  const state={...fresh(),...raw};
+  state.lang=T[state.lang]?state.lang:"pt";
+  state.ofs=Array.isArray(state.ofs)?state.ofs:OF0.map(o=>({...o}));
+  const base=Object.fromEntries(OF0.map(o=>[o.of,o]));
+  if(raw.ordersVersion!==7){
+    // Drop demo / stale orders. A run that only holds orders outside the current plan is cancelled with its segments.
+    if(state.run&&!(state.run.ids||[]).every(id=>base[id])){const runId=state.run.id;state.run=null;state.stopPanel=false;state.log=(state.log||[]).filter(l=>!runId||l.runId!==runId);}
+    const keep=Object.fromEntries(state.ofs.filter(o=>base[o.of]&&o.state!=="todo").map(o=>[o.of,o]));
+    state.ofs=OF0.map(o=>keep[o.of]?{...o,state:keep[o.of].state,made:keep[o.of].made,recut:keep[o.of].recut}:{...o});
+    state.sel=[];state.tab=state.run?"run":"todo";state.fmt="all";
+  }
+  state.ordersVersion=7;
+  state.ofs.forEach(o=>{if(o.state==="done"&&o.made<o.plan)o.state="partial";});
+  if(state.tab==="done"&&!state.ofs.some(o=>o.state==="done"))state.tab="run";
+  state.ofs=state.ofs.map(o=>({...o,ov:base[o.of]?.ov||o.ov||"",dest:base[o.of]?.dest||NEXT_MACHINE,pri:base[o.of]?.pri||o.pri||""}));
+  state.theme=state.theme==="light"?"light":"dark";state.q=typeof state.q==="string"?state.q:"";state.menu=false;
+  if(!["all",...FMT.map(f=>f[0])].includes(state.fmt))state.fmt="all";
+  state.filters={date:"",user:"",shift:"",...state.filters};
+  if(!raw.planningUpdated){state.fmt="all";state.tab="todo";state.planningUpdated=true;}
+  if(!["todo","run","done"].includes(state.tab))state.tab="todo";
+  state.log=Array.isArray(state.log)?state.log:[];
+  state.schedules={...fresh().schedules,...state.schedules};
+  for(const user of USERS){const schedule=state.schedules[user[0]];
+    if(!schedule || ![schedule.start,schedule.end].every(n=>Number.isInteger(n)&&n>=0&&n<1440) || schedule.start===schedule.end) state.schedules[user[0]]={...SHIFTS[user[2]],shift:user[2]};
+    else if(!SHIFTS[schedule.shift]) state.schedules[user[0]]={...schedule,shift:user[2]};
+  }
+  state.page=state.page==="kanban"?"kanban":"plan";
+  if(!Array.isArray(state.sel))state.sel=[];
+  if(raw.version!==2){
+    state.log=state.log.map((log,i)=>{
+      const userId=logUser(log), start=Date.parse(log.at);
+      return {...log,id:log.id||`legacy-${i}`,uid:userId,userName:USERS.find(u=>u[0]===userId)?.[1]||userId,
+        startedAt:Number.isFinite(start)?start:null,endedAt:Number.isFinite(start)?start+Math.max(0,Number(log.sec)||0)*1000:null,
+        shift:log.shift||null,schedule:log.schedule||null,orders:orderSnapshot(String(log.of||"").split("+"),state.ofs),reasonId:reasonIndex(log.why)};
+    });
+  }
+  if(state.run){
+    const r=state.run;
+    // v1 writes completion records only on Finish. Trailing segments belong to the active execution.
+    if(!r.id){
+      r.id=uid();let last=-1;
+      state.log.forEach((log,i)=>{if(log.t==="pcs")last=i;});
+      const segments=state.log.slice(last+1).filter(log=>["prod","stop"].includes(log.t)&&log.of===r.ids.join("+")&&logUser(log)===state.uid);
+      r.prodMs=segments.filter(l=>l.t==="prod").reduce((n,l)=>n+l.sec*1000,0);
+      r.stopMs=segments.filter(l=>l.t==="stop").reduce((n,l)=>n+l.sec*1000,0);
+      r.startedAt=segments.length?segments[0].startedAt:r.since;
+      r.reasonId=reasonIndex(r.reason);
+      r.context={uid:state.uid,userName:USERS.find(u=>u[0]===state.uid)?.[1]||state.uid,shift:null,schedule:null,orders:orderSnapshot(r.ids,state.ofs)};
+      for(const segment of segments)segment.runId=r.id;
+    }
+    state.uid=r.context.uid;state.screen=state.screen==="schedules"?"schedules":"main";state.sel=[];
+    state.stopPanel=r.phase==="stop"&&r.reasonId==null&&!r.reason;
+  } else {
+    state.ofs.forEach(o=>{if(o.state==="run")o.state="todo";});
+    if(state.screen==="pin") state.screen=state.uid?"main":"who";
+  }
+  if(!USERS.some(u=>u[0]===state.uid)||!["main","schedules"].includes(state.screen)){
+    state.screen="who";
+    state.uid=null;
+  }
+  delete state.pin;delete state.err;
+  state.version=2;state.modal=null;state.rid=null;
+  return state;
+}
+let raw=null,initialStorageError=false;
+try{const stored=localStorage.getItem(KEY);raw=stored?JSON.parse(stored):null;
+  if(raw&&raw.version!==2&&!localStorage.getItem(KEY+"-backup-v1"))localStorage.setItem(KEY+"-backup-v1",stored);
+}catch(error){initialStorageError=true;}
+let S=migrate(raw||fresh());
+function showWorkerSelection(){S.screen="who";S.uid=null;S.sel=[];S.modal=null;}
+if(new URLSearchParams(location.search).get("inicio")==="1"&&!S.run)showWorkerSelection();
+const t=()=>T[S.lang],ofBy=id=>S.ofs.find(o=>o.of===id),me=()=>USERS.find(u=>u[0]===S.uid);
+const sheet=o=>`${o.mat} ${o.esp} mm`;
+let toastTimer;
+function toast(message){$("toast").textContent=message;$("toast").className="toast";clearTimeout(toastTimer);toastTimer=setTimeout(()=>{$("toast").className="";$("toast").textContent="";},5000);}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(error){toast(t().storageError);}}
+const scheduleText = schedule => schedule?`${hm(schedule.start)}–${hm(schedule.end)}${schedule.end<schedule.start?` · ${t().nextDay}`:""}`:t().unknownSchedule;
+const reasonText = record => Number.isInteger(record.reasonId)?t().rs[record.reasonId]:(record.why||record.reason||t().pendingReason);
+const shortStamp = value => value==null||!Number.isFinite(value)?"—":new Date(value).toLocaleString(locale(),{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+function dayBounds(date=localDay()) {const [y,m,d]=date.split("-").map(Number);return [new Date(y,m-1,d).getTime(),new Date(y,m-1,d+1).getTime()];}
+const overlapMs=(start,end,bounds)=>Math.max(0,Math.min(end,bounds[1])-Math.max(start,bounds[0]));
+function totals(now=Date.now()){
+  if(!S.run)return {p:0,s:0,total:0};
+  const r=S.run,elapsed=Math.max(0,now-r.since),p=(r.prodMs+(r.phase==="prod"?elapsed:0))/1000,s=(r.stopMs+(r.phase==="stop"?elapsed:0))/1000;
+  return {p,s,total:p+s};
+}
+function stats(now=Date.now()){
+  const bounds=dayBounds(localDay(now));let p=0,s=0,n=0;
+  for(const log of S.log){if(logUser(log)!==S.uid)continue;
+    if(log.t==="pcs"){if(localDay(Date.parse(log.at))===localDay(now))n+=log.n;continue;}
+    if(log.startedAt==null||log.endedAt==null)continue;
+    const sec=overlapMs(log.startedAt,log.endedAt,bounds)/1000;
+    if(log.t==="prod")p+=sec;if(log.t==="stop")s+=sec;
+  }
+  if(S.run&&S.run.context.uid===S.uid){const elapsed=overlapMs(S.run.since,now,bounds)/1000;if(S.run.phase==="prod")p+=elapsed;else s+=elapsed;n+=S.run.ids.reduce((sum,id)=>sum+Math.max(0,ofBy(id).made-runBase(id)),0);}
+  return {p,s,total:p+s,n};
+}
+
+/* ---------- Kanban: every order this worker produced, with its times and stops ---------- */
+function runSegments(runId,now){
+  const segments=runId?S.log.filter(l=>l.runId===runId&&(l.t==="prod"||l.t==="stop")&&l.startedAt!=null).map(l=>({...l,ongoing:false})):[];
+  if(S.run&&S.run.id===runId)segments.push({id:`active-${S.run.id}`,t:S.run.phase,startedAt:S.run.since,endedAt:null,reasonId:S.run.reasonId,why:S.run.reason,ongoing:true});
+  return segments;
+}
+function shiftWindow(date,shift){const [y,m,d]=date.split("-").map(Number),sh=SHIFTS[shift],start=new Date(y,m-1,d).getTime()+sh.start*60000;let end=new Date(y,m-1,d).getTime()+sh.end*60000;if(end<=start)end+=86400000;return [start,end];}
+function previousShift(now=new Date()){
+  const h=now.getHours(),day=n=>localDay(now.getTime()+n*86400000);
+  if(h>=7&&h<15)return {date:day(-1),shift:"N"};
+  if(h>=15&&h<23)return {date:day(0),shift:"M"};
+  return {date:h>=23?day(0):day(-1),shift:"T"};
+}
+function kanbanRows(now=Date.now()){
+  const rows=S.log.filter(l=>l.t==="pcs"&&logUser(l)===S.uid).map((l,i)=>({key:l.id||`pcs-${i}`,of:l.of,runId:l.runId,made:l.n,discard:l.discard||0,shift:l.shift,endAt:Date.parse(l.at),live:false}));
+  if(S.run&&S.run.context.uid===S.uid)S.run.ids.forEach(id=>rows.push({key:`live-${id}`,of:id,runId:S.run.id,made:Math.max(0,(ofBy(id)?.made||0)-runBase(id)),discard:0,shift:S.run.context.shift,endAt:null,live:true}));
+  const {date,shift}=S.filters,win=date&&SHIFTS[shift]?shiftWindow(date,shift):date?dayBounds(date):null;
+  return rows.map(row=>{
+    const segments=runSegments(row.runId,now);let p=0,s=0;
+    for(const g of segments){const d=Math.max(0,(g.endedAt??now)-g.startedAt)/1000;if(g.t==="prod")p+=d;else s+=d;}
+    const startAt=segments.length?Math.min(...segments.map(g=>g.startedAt)):row.endAt;
+    return {...row,p,s,startAt,stops:segments.filter(g=>g.t==="stop").sort((a,b)=>a.startedAt-b.startedAt)};
+  }).filter(r=>{const st=r.startAt??now,en=r.endAt??now;
+      if(win)return overlapMs(st,Math.max(en,st+1),win)>0;
+      if(SHIFTS[shift])return r.shift===shift;
+      return true;})
+    .sort((a,b)=>(a.startAt??now)-(b.startAt??now));
+}
+function kanbanBody(now=Date.now()){
+  const x=t(),k=x.k,user=me(),rows=kanbanRows(now),seen=new Set();let p=0,s=0,n=0;
+  for(const r of rows){n+=r.made||0;const key=r.runId||r.key;if(seen.has(key))continue;seen.add(key);p+=r.p;s+=r.s;}
+  const summary=[[x.operatorName,esc(user[1])],[x.operatorNo,esc(user[3])],[x.qtyProduced,n],[x.prodTime,hms(p)],[x.stopTime,hms(s)]];
+  const time=v=>v==null?"—":new Date(v).toLocaleTimeString(locale(),{hour:"2-digit",minute:"2-digit"});
+  const body=rows.map(r=>{
+    const o=ofBy(r.of)||{of:r.of,client:"",desc:"",plan:"—"};
+    const stops=r.stops.map(g=>`<div>${esc(reasonText(g))}<b>${hms(Math.max(0,(g.endedAt??now)-g.startedAt)/1000)}</b></div>`).join("")||"—";
+    return `<tr class="${r.live?"live":""}"><td>${o.pri?`<span class="pri">${esc(o.pri)}</span>`:"—"}</td><td>${esc(o.client)}</td><td><b>${esc(r.of)}</b></td><td class="model">${esc(o.desc)}</td><td class="num"><b>${r.made}</b>/${o.plan}${r.discard?`<br><small class="mu">−${r.discard}</small>`:""}</td><td class="num">${esc(o.comp??"—")}</td><td class="nw">${esc(fmtName(o))}</td><td class="num">${esc(o.esp??"—")}</td><td class="num">${esc(o.lb??"—")}</td><td class="num">${esc(o.lt??"—")}</td><td class="num">${time(r.startAt)}</td><td class="num">${r.live?"●":time(r.endAt)}</td><td class="num">${hms(r.p)}</td><td class="stops">${stops}</td></tr>`;
+  }).join("");
+  const head=["pri","client","of","model","qty","comp","coni","esp","lb","lt","start","end","prod","stops"].map(c=>`<th>${k[c]}</th>`).join("");
+  const table=rows.length?`<div class="kb-table-wrap"><table class="kb-table"><thead><tr>${head}</tr></thead><tbody>${body}</tbody><tfoot><tr><td colspan="4">${x.total}</td><td class="num">${n}</td><td colspan="7"></td><td class="num">${hms(p)}</td><td>${hms(s)}</td></tr></tfoot></table></div>`:`<div class="empty">${x.noKanban}</div>`;
+  return `<dl class="kb-summary">${summary.map(([key,v])=>`<div><dt>${key}</dt><dd>${v}</dd></div>`).join("")}</dl>${table}`;
+}
+function vKanban(){
+  const x=t(),user=me(),f=S.filters,prev=previousShift();
+  const shiftBtns=[["",x.allShifts],...Object.keys(SHIFTS).map(id=>[id,x[id]])].map(([id,label])=>`<button class="${(f.shift||"")===id?"on":""}" data-a="kbShift" data-v="${id}">${label}</button>`).join("");
+  return `<div class="kb-top"><h2>${x.kanban} · ${esc(user[1])}</h2><input id="filter-date" type="date" value="${esc(f.date)}" aria-label="${x.date}"><button class="${f.date===localDay()&&!f.shift?"on":""}" data-a="kbDate" data-v="today">${x.todayBtn}</button><button class="${f.date===prev.date&&f.shift===prev.shift?"on":""}" data-a="kbPrev">${x.prevShift}</button><button class="${!f.date?"on":""}" data-a="kbDate" data-v="all">${x.allDatesBtn}</button></div>
+    <div class="kb-filters"><span class="mu">${x.shiftLabel}</span><div class="seg">${shiftBtns}</div></div>
+    <div id="kanban-body" class="kb-body">${kanbanBody()}</div>`;
+}
+
+/* ---------- Header (compact, sticky) ---------- */
+const languages=()=>`<div class="lg">${LANGS.map(l=>`<button class="${S.lang===l[0]?"on":""}" data-a="lang" data-v="${l[0]}" aria-pressed="${S.lang===l[0]}">${l[1]}</button>`).join("")}</div>`;
+const langSelect=()=>`<select id="lang-select" class="lang-select" aria-label="Idioma / Language">${LANGS.map(l=>`<option value="${l[0]}" ${S.lang===l[0]?"selected":""}>${l[1]}</option>`).join("")}</select>`;
+const fsSupported=()=>!!(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen);
+const isFullscreen=()=>!!(document.fullscreenElement||document.webkitFullscreenElement);
+function userMenu(){
+  const x=t();
+  return `<div class="menu" role="menu">
+    <button role="menuitem" data-a="schedules">🕒 ${x.changeSchedule}</button>
+    <button role="menuitem" data-a="theme">${S.theme==="light"?"🌙 "+x.themeDark:"☀️ "+x.themeLight}</button>
+    ${fsSupported()?`<button role="menuitem" data-a="fullscreen">⛶ ${isFullscreen()?x.exitFullscreen:x.fullscreen}</button>`:""}
+    <div class="menu-row"><span>${x.language}</span>${langSelect()}</div>
+    <hr><button role="menuitem" data-a="out">⎋ ${x.logout}</button>
+  </div>`;
+}
+function topBar(){
+  const x=t(),user=me();
+  if(S.screen==="main"&&user){const sc=S.schedules[user[0]];
+    return `<header class="hdr"><span class="machine">${x.gui}</span><nav class="nav2" aria-label="${x.gui}">${[["plan",x.planning],["kanban",x.kanban]].map(([id,label])=>`<button class="${S.page===id?"on":""}" data-a="page" data-v="${id}" aria-current="${S.page===id?"page":"false"}">${label}</button>`).join("")}</nav><button class="user-btn" data-a="menu" aria-haspopup="menu" aria-expanded="${!!S.menu}"><span class="av small">${ini(user[1])}</span><span class="who-mini"><b>${esc(user[1])}</b><small>${x[sc.shift]} · ${scheduleText(sc)}</small></span><span aria-hidden="true">▾</span></button>${S.menu?userMenu():""}</header>`;
+  }
+  return `<header class="hdr"><span class="machine">${x.gui}</span><span class="spacer"></span>${S.screen==="who"?`<button data-a="theme">${S.theme==="light"?"🌙":"☀️"}</button>${fsSupported()?`<button data-a="fullscreen" aria-label="${x.fullscreen}">⛶</button>`:""}`:""}${languages()}</header>`;
+}
+function vWho(){
+  const x=t();
+  return `<h2>${x.who}</h2><div class="users">${USERS.map(user=>
+    `<button data-a="user" data-v="${user[0]}"><span class="av">${ini(user[1])}</span><b>${esc(user[1])}</b><small>Nº ${esc(user[3])}</small></button>`
+  ).join("")}</div>`;
+}
+function vSchedules(){
+  const x=t(),user=me(),schedule=S.schedules[user[0]];
+  const shiftBar=`<div class="seg shifts" role="group" aria-label="${x.shiftLabel}">${Object.entries(SHIFTS).map(([id,shift])=>`<button class="${schedule.shift===id?"on":""}" data-a="shift" data-v="${id}" aria-pressed="${schedule.shift===id}">${x[id]}<small>${hm(shift.start)}–${hm(shift.end)}</small></button>`).join("")}</div>`;
+  const fields=[["start",x.entry],["end",x.exit]].map(([field,label])=>`
+    <div class="schedule-field">
+      <span id="label-${field}">${label}</span>
+      <div class="stepper" role="group" aria-labelledby="label-${field}">
+        <button data-a="adjust" data-v="${user[0]}:${field}:-30" aria-label="${label} · ${x.less}">−30 <small>${x.minute}</small></button>
+        <output>${hm(schedule[field])}</output>
+        <button data-a="adjust" data-v="${user[0]}:${field}:30" aria-label="${label} · ${x.more}">+30 <small>${x.minute}</small></button>
+      </div>
+    </div>`).join("");
+  return `<section class="schedule-card">
+      <div class="who-line"><span class="av small">${ini(user[1])}</span><div><b>${esc(user[1])}</b><small class="mu"> · Nº ${esc(user[3])}</small></div><h2>${x.mySchedule}</h2></div>
+      <p class="mu">${x.scheduleIntro}</p>
+      <span class="field-label">${x.shiftQ}</span>${shiftBar}
+      <div class="schedule-fields">${fields}</div>
+      <div class="schedule-total"><b>${x[schedule.shift]}</b> · ${scheduleText(schedule)}</div>
+      <button class="g validate" data-a="validate">✓ ${x.validate}</button>
+    </section><div class="section-title"><button data-a="out">${x.switchWorker}</button><small class="mu">${x.saved}</small></div>`;
+}
+
+/* ---------- Planning list ---------- */
+let editingQuantity=null;
+const listEditable=order=>!!order&&!S.run&&S.screen==="main"&&S.page==="plan"&&order.state==="todo";
+function canEditQuantity(order){
+  if(!order||!me())return false;
+  return S.run?S.run.ids.includes(order.of):listEditable(order);
+}
+function quantityControls(order){
+  const x=t(),id=esc(order.of);
+  const field=editingQuantity===order.of?`
+    <label for="quantity-${id}">${x.produced}
+      <span class="entry-field"><input id="quantity-${id}" type="number" inputmode="numeric" min="0" step="1"
+        value="${order.made}" data-quantity="${id}" aria-label="OF ${id} · ${x.produced}"><span>/ ${order.plan}</span></span>
+    </label>`:"";
+  return `<div class="quantity-entry">${field}
+    <button data-a="editQuantity" data-v="${id}" title="OF ${id}">${x.editQuantity}</button>
+    <button class="a" data-a="full" data-v="${id}" aria-label="OF ${id} · ${x.fullQuantity}" title="${x.fullQuantity}">100%</button>
+  </div>`;
+}
+const priTag=o=>o.pri?`<span class="pri" title="${t().f.pri}">${esc(o.pri)}</span>`:"";
+function ofGrid(o){
+  // Same order as the CPIs sheet. Coil cut width/length = development of the conical sheet (LTotal × Comp).
+  const f=t().f,rows=[["pri",o.pri||"—"],["client",o.client],["of",o.of],["desc",o.desc],["plan",o.plan],["made",o.made],["due",o.due||"—"],["fmt",fmtName(o)],["esp",`${o.esp} mm`],["lb",o.lb],["lt",o.lt],["ltot",o.ltot],["comp",o.comp],["cutW",o.ltot!=null?`${o.ltot} mm`:"—"],["cutL",o.comp!=null?`${o.comp} mm`:"—"],["mat",o.mat],["dest",o.dest||NEXT_MACHINE]];
+  return `<dl class="of-grid">${rows.map(([k,v])=>`<div class="${k==="desc"?"wide":""}"><dt>${f[k]}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>`;
+}
+const inTab=(o,tab)=>tab==="run"?(o.state==="run"||o.state==="partial"):o.state===tab;
+const matchesQuery=o=>!S.q||o.of.includes(S.q.trim());
+function ofCard(o){
+  const x=t(),first=S.sel.length?ofBy(S.sel[0]):null;
+  const selected=S.sel.includes(o.of),compatible=!S.run&&!selected&&S.sel.length===1&&(o.state==="todo"||o.state==="partial")&&sheet(o)===sheet(first),expanded=S.expandedOf===o.of,running=o.state==="run",partial=o.state==="partial";
+  return `<article class="of-card ${selected?"sel":""} ${compatible?"ok":""} ${running?"running":""} ${partial?"partial":""}" data-of="${esc(o.of)}"><div class="of-row"><button class="of" data-a="of" data-v="${esc(o.of)}" ${S.run?"":`aria-pressed="${selected}"`}><span class="pri-col ${o.pri?"":"none"}" title="${x.f.pri} (TRN)">${esc(o.pri||"—")}</span><div class="order-copy"><div class="order-heading"><b>OF ${esc(o.of)}</b><span>${esc(o.client)}</span>${running?` <span class="accent run-tag ${S.run?.phase==="stop"?"stopped":""}">● ${S.run?.phase==="stop"?x.stopped:x.cutting}</span>`:""}${compatible?` <span class="accent">${x.same}</span>`:""}${o.recut?` <span class="accent">${x.recut}</span>`:""}</div><div class="description">${esc(o.desc)}</div><small>${[fmtName(o),sheet(o),`LBase ${o.lb} · LTopo ${o.lt} · Comp ${o.comp}`,o.due,"→ "+(o.dest||NEXT_MACHINE)].filter(Boolean).map(esc).join(" · ")}</small></div><div class="quantity"><b data-piece-count="${esc(o.of)}">${o.state==="done"||o.made>0?o.made+"/"+o.plan:o.plan}</b><small>${x.pcs}</small></div></button><button class="details-button" data-a="details" data-v="${esc(o.of)}" aria-expanded="${expanded}" aria-controls="details-${esc(o.of)}" aria-label="${x.details} ${esc(o.of)}">${expanded?"▴":"▾"}</button></div><div class="of-details" id="details-${esc(o.of)}" ${expanded?"":"hidden"}>${ofGrid(o)}</div></article>`;
+}
+function vList(){
+  const x=t(),inFmt=o=>S.fmt==="all"||o.fmt===S.fmt;
+  const count=tab=>S.ofs.filter(o=>inFmt(o)&&matchesQuery(o)&&inTab(o,tab)).length;
+  const list=S.ofs.filter(o=>inFmt(o)&&matchesQuery(o)&&inTab(o,S.tab)&&!(S.tab==="run"&&S.run?.ids.includes(o.of))).sort(byPriority);
+  const cards=list.map(ofCard).join("");
+  const empty=S.q?x.noMatch:{todo:x.noPending,run:x.noRun,done:x.noCompleted}[S.tab];
+  const top=`<div class="search"><input id="of-search" type="search" inputmode="numeric" enterkeyhint="search" autocomplete="off" placeholder="🔍 ${x.searchOf}" aria-label="${x.searchOf}" value="${esc(S.q)}">${S.q?`<button data-a="clearSearch">${x.clear}</button>`:""}</div><div class="seg formats">${[["all",x.allFormats],...FMT].map(f=>`<button class="${S.fmt===f[0]?"on":""}" data-a="fmt" data-v="${f[0]}">${f[1]}</button>`).join("")}</div><div class="seg tabs3">${[["todo",x.todo],["run",x.run],["done",x.done]].map(([id,label])=>`<button class="${S.tab===id?"on":""}" data-a="tab" data-v="${id}" aria-pressed="${S.tab===id}">${label}<span class="count">${count(id)}</span></button>`).join("")}</div>`;
+  const runPart=S.tab==="run"&&S.run?runDetails():"";
+  return `<section class="planning-list" aria-label="${x.orders}">${top}${runPart}${cards||(runPart?"":`<div class="empty">${empty}</div>`)}</section>${!S.run&&!S.sel.length&&S.tab==="todo"?`<div class="hint">${x.tap}</div>`:""}${foot()}`;
+}
+
+/* ---------- Full data of the order(s) being worked on ("Em curso" tab) ---------- */
+function runLive(now=Date.now()){
+  const x=t(),r=S.run,segments=runSegments(r.id,now);let p=0,s=0;
+  for(const g of segments){const d=Math.max(0,(g.endedAt??now)-g.startedAt)/1000;if(g.t==="prod")p+=d;else s+=d;}
+  const stops=segments.filter(g=>g.t==="stop").sort((a,b)=>a.startedAt-b.startedAt);
+  return `<div class="kb-times"><span>${x.started} <b>${shortStamp(r.startedAt)}</b></span><span>${x.by} <b>${esc(r.context.userName)}</b></span><span>${x.prodTime} <b>${hms(p)}</b></span><span>${x.stopTime} <b>${hms(s)}</b></span><span>${x.total} <b>${hms(p+s)}</b></span></div>
+    <div class="kb-stops"><span class="kb-label">${x.stopsOf} (${stops.length})</span>${stops.map(g=>`<div class="kb-stop ${g.ongoing?"ongoing":""}"><b>${esc(reasonText(g))}</b><span>${shortStamp(g.startedAt)} → ${g.ongoing?x.inProgress:shortStamp(g.endedAt)}</span><b>${hms(Math.max(0,(g.endedAt??now)-g.startedAt)/1000)}</b></div>`).join("")||`<span class="mu kb-none">${x.noStopsOf}</span>`}</div>`;
+}
+function runDetails(){
+  const x=t(),r=S.run,st=r.phase==="stop";
+  return `<section class="run-details">${r.ids.map(id=>{const o=ofBy(id);return `<article class="kb-card live ${st?"paused":""}">
+      <div class="kb-head">${priTag(o)}<b>OF ${esc(id)}</b><span class="mu">${esc(o.client)}</span><span class="desc">${esc(o.desc)}</span><span class="badge">● ${st?x.stopped:x.cutting}</span><b class="kb-qty" data-piece-count="${esc(id)}">${o.made}/${o.plan}</b></div>
+      ${ofGrid(o)}
+    </article>`;}).join("")}<div class="kb-card live" id="run-live">${runLive()}</div></section>`;
+}
+
+/* ---------- Active run bar (sticky with the header) ---------- */
+function runBar(){
+  if(!S.run)return "";const x=t(),r=S.run,z=totals(),st=r.phase==="stop";
+  return `<section class="run-bar ${st?"paused":""}" id="run-bar" aria-label="${x.active}"><div class="bar-inner">
+    <div class="bar-top"><span class="state">● ${st?x.stopped:x.cutting}</span><div class="total-clock"><b id="clock-total" title="${x.total}">${hms(z.total)}</b></div><div class="bar-times"><span>${x.production} <b id="clock-prod">${hms(z.p)}</b></span><span>${x.downtime} <b id="clock-stop">${hms(z.s)}</b></span></div>${st?`<button class="reason-link" data-a="reasonPanel" title="${esc(reasonText(r))}">${esc(reasonText(r))} ▾</button>`:""}<div class="bar-actions"><button class="${st?"g":"a"}" data-a="${st?"resume":"stop"}">${st?x.resume:x.stop}</button><button class="r" data-a="fin">${x.finish}</button></div></div>
+    ${r.ids.map(id=>{const o=ofBy(id),key=esc(id);return `<div class="bar-of"><b class="of-id">OF ${key}</b><span class="meta">${[o.client,o.desc,fmtName(o),sheet(o),"→ "+(o.dest||NEXT_MACHINE)].filter(Boolean).map(esc).join(" · ")}</span><span class="entry-field"><input id="rq-${key}" type="number" inputmode="numeric" min="0" step="1" value="${o.made}" data-quantity="${key}" aria-label="OF ${key} · ${x.produced}"><span>/ ${o.plan}</span></span><button class="a" data-a="full" data-v="${key}" aria-label="OF ${key} · ${x.fullQuantity}">100%</button></div>`;}).join("")}
+  </div></section>`;
+}
+function foot(){const x=t(),z=stats();return `<div class="foot" id="foot"><span>${x.today}</span><span>${x.total} <b data-stat="total">${hms(z.total)}</b></span><span>${x.production} <b data-stat="p">${hms(z.p)}</b></span><span>${x.downtime} <b data-stat="s">${hms(z.s)}</b></span><span><b data-stat="n">${z.n}</b> ${x.pcs}</span></div>`;}
+
+/* ---------- Order data pre-filled in the stop panel and in the finish dialog ---------- */
+function finNote(o){
+  const x=t(),missing=o.plan-o.made;if(missing<=0)return "";
+  return `<span class="fin-note part" data-fin-note="${esc(o.of)}">${x.miss} ${missing} · ${x.staysRun}</span>`;
+}
+function ofForm(prefix){
+  const x=t();
+  return `<div class="of-forms">${S.run.ids.map(id=>{const o=ofBy(id),key=esc(id);return `<div class="of-form">
+    <div class="of-form-head">${priTag(o)}<b>OF ${key}</b><span>${esc(o.client)} — ${esc(o.desc)}</span></div>
+    <div class="of-form-fields">
+      <label for="${prefix}-${key}">${x.qtyProduced}<span class="entry-field"><input id="${prefix}-${key}" type="number" inputmode="numeric" enterkeyhint="done" min="0" step="1" value="${o.made}" data-quantity="${key}"><span>/ ${o.plan}</span></span></label>
+      <button class="a" data-a="full" data-v="${key}" aria-label="OF ${key} · ${x.fullQuantity}">100%</button>
+      <span class="static">${x.nextMachine}<b>${esc(o.dest||NEXT_MACHINE)}</b></span>
+    </div>${prefix==="fq"?finNote(o):""}</div>`;}).join("")}</div>`;
+}
+function reasonPanel(){if(!S.stopPanel||S.run?.phase!=="stop")return "";const x=t();return `<section class="reason-panel" id="reason-panel" aria-labelledby="reason-title"><div class="reason-inner"><div class="section-title"><h2 id="reason-title">${x.why}</h2><button data-a="hideReason">${x.closePanel}</button></div>${ofForm("pq")}<div class="reasons">${x.rs.map((reason,i)=>`<button data-a="why" data-v="${i}" class="${S.run.reasonId===i?"on":""}">${reason}</button>`).join("")}</div></div></section>`;}
+function modal(){const x=t();
+  if(S.modal==="fin"&&S.run)return `<div class="ov"><section class="md" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><h2 id="dialog-title">${x.fin}</h2>${ofForm("fq")}<div class="two"><button data-a="close">${x.cancel}</button><button class="r" data-a="done">${x.yes}</button></div></section></div>`;
+  if(S.modal==="again"&&!S.run)return `<div class="ov"><section class="md" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><h2 id="dialog-title">OF ${esc(S.rid)}</h2><p>${x.again}</p><div class="two"><button data-a="close">${x.cancel}</button><button class="a" data-a="recut">${x.againY}</button></div></section></div>`;
+  if(S.modal==="machineStop"&&S.run?.phase==="stop"){const r=S.run;return `<div class="ov"><section class="md warn" role="alertdialog" aria-modal="true" aria-labelledby="dialog-title"><h2 id="dialog-title">⚠ ${x.machineStopTitle}</h2><p>${x.machineStopText}</p><dl class="warn-box"><div><dt>${x.reason}</dt><dd>${esc(reasonText(r))}</dd></div><div><dt>OF</dt><dd>${r.ids.map(esc).join(" + ")}</dd></div><div><dt>${x.since}</dt><dd>${shortStamp(r.since)}</dd></div><div><dt>${x.duration}</dt><dd id="warn-dur">${hms((Date.now()-r.since)/1000)}</dd></div><div><dt>${x.by}</dt><dd>${esc(r.context.userName)}</dd></div></dl><div class="two"><button data-a="close">${x.close}</button><button class="g" data-a="resumeWarn">▶ ${x.resumeNow}</button></div></section></div>`;}
+  return "";
+}
+function syncInsets(){document.documentElement.style.setProperty("--reason-h",`${$("reason-panel")?.getBoundingClientRect().height||0}px`);}
+const resizeObserver=new ResizeObserver(syncInsets);
+function render(resetScroll=false){
+  const previous=document.activeElement,focusId=previous?.id,action=previous?.dataset?.a,value=previous?.dataset?.v,y=resetScroll?0:scrollY;
+  document.documentElement.lang=S.lang;document.documentElement.dataset.theme=S.theme;document.querySelector('meta[name="theme-color"]')?.setAttribute("content",S.theme==="light"?"#f3f4f6":"#0f1215");
+  const showDock=S.screen==="main"&&S.page==="plan"&&!S.run&&S.sel.length;
+  const view=S.screen==="who"?vWho():S.screen==="schedules"?vSchedules():S.page==="kanban"?vKanban():vList();
+  $("app").innerHTML=`<div class="fixed-top" id="fixed-top">${topBar()}${runBar()}</div><main class="w ${showDock?"has-dock":""}">${view}</main>`+(showDock?`<div class="dock"><button class="g" data-a="start">▶ ${S.sel.length===2?t().start2:t().start}</button></div>`:"")+reasonPanel();
+  $("ov").innerHTML=modal();$("app").inert=!!S.modal;
+  resizeObserver.disconnect();if($("reason-panel"))resizeObserver.observe($("reason-panel"));syncInsets();
+  if(S.modal){const md=document.querySelector(".md");if(!md?.contains(previous)||!previous.id)md?.querySelector(".two button")?.focus({preventScroll:true});else $(focusId)?.focus({preventScroll:true});}
+  else if(!resetScroll){const next=focusId?$(focusId):Array.from(document.querySelectorAll("[data-a]")).find(b=>b.dataset.a===action&&b.dataset.v===value);next?.focus({preventScroll:true});}
+  scrollTo(0,y);save();
+}
+function tick(){const now=Date.now(),z=totals(now);for(const [id,value] of [["clock-total",z.total],["clock-prod",z.p],["clock-stop",z.s]])if($(id))$(id).textContent=hms(value);
+  if($("foot")){const daily=stats(now);document.querySelectorAll("[data-stat]").forEach(el=>el.textContent=el.dataset.stat==="n"?daily.n:hms(daily[el.dataset.stat]));}
+  if($("kanban-body")&&S.run)$("kanban-body").innerHTML=kanbanBody(now);
+  if($("run-live")&&S.run)$("run-live").innerHTML=runLive(now);
+  if($("warn-dur")&&S.run)$("warn-dur").textContent=hms((now-S.run.since)/1000);
+}
+function closeSegment(now=Date.now()){
+  const r=S.run,elapsed=Math.max(0,now-r.since);
+  S.log.push({...r.context,id:uid(),runId:r.id,k:r.context.uid+"|"+localDay(r.since),t:r.phase,sec:elapsed/1000,why:r.reason||null,reasonId:r.reasonId,of:r.ids.join("+"),at:new Date(r.since).toISOString(),startedAt:r.since,endedAt:now});
+  if(r.phase==="prod")r.prodMs+=elapsed;else r.stopMs+=elapsed;r.since=now;
+}
+function addSelection(id){const o=ofBy(id);if(!o||!["todo","partial"].includes(o.state))return;const i=S.sel.indexOf(id);if(i>=0){S.sel.splice(i,1);return;}if(S.sel.length>=2)return toast(t().max);if(S.sel.length&&sheet(ofBy(S.sel[0]))!==sheet(o))return toast(t().diff);S.sel.push(id);}
+const A={
+  lang:value=>{if(T[value])S.lang=value;},
+  user:value=>{if(S.run||S.screen!=="who")return;const user=USERS.find(u=>u[0]===value);if(!user)return;S.uid=value;
+    const now=shiftNow(),schedule=S.schedules[value];if(schedule.shift!==now)S.schedules[value]={...SHIFTS[now],shift:now};
+    S.screen="schedules";S.page="plan";S.fmt="all";S.tab="todo";S.sel=[];S.filters={date:localDay(),user:""};editingQuantity=null;},
+  shift:value=>{if(S.screen!=="schedules"||!SHIFTS[value]||!me())return;S.schedules[S.uid]={...SHIFTS[value],shift:value};},
+  schedules:()=>{if(S.screen==="main"&&me())S.screen="schedules";},
+  validate:()=>{if(S.screen==="schedules"&&me())S.screen="main";},
+  adjust:value=>{const [user,field,delta]=value.split(":");if(S.screen!=="schedules"||user!==me()?.[0]||!["start","end"].includes(field)||![-30,30].includes(+delta))return;const schedule=S.schedules[user],next=(schedule[field]+(+delta)+1440)%1440;if(next===schedule[field==="start"?"end":"start"])return toast(t().equalTime);schedule[field]=next;},
+  out:()=>{if(S.run)return toast(t().busy);showWorkerSelection();},
+  menu:()=>{S.menu=!S.menu;},
+  theme:()=>{S.theme=S.theme==="light"?"dark":"light";},
+  fullscreen:()=>{const el=document.documentElement;try{if(isFullscreen())(document.exitFullscreen||document.webkitExitFullscreen).call(document);else{const req=el.requestFullscreen||el.webkitRequestFullscreen;const pr=req.call(el,{navigationUI:"hide"});pr?.catch?.(()=>{});}}catch(e){}},
+  clearSearch:()=>{S.q="";},
+  kbShift:value=>{S.filters.shift=SHIFTS[value]?value:"";if(S.filters.shift&&!S.filters.date)S.filters.date=localDay();},
+  kbPrev:()=>{const p=previousShift();S.filters.date=p.date;S.filters.shift=p.shift;},
+  page:value=>{if(["plan","kanban"].includes(value))S.page=value;},
+  fmt:value=>{if(value==="all"||FMT.some(f=>f[0]===value)){S.fmt=value;S.sel=[];editingQuantity=null;}},
+  tab:value=>{if(["todo","run","done"].includes(value)){S.tab=value;S.sel=[];}},
+  of:value=>{const o=ofBy(value);if(!o)return;
+    if(S.run){if(S.run.phase==="stop"){S.modal="machineStop";S.rid=value;return;}return toast(t().runFirst);}
+    if(o.state==="done"){S.modal="again";S.rid=value;}else addSelection(value);},
+  recut:()=>{if(S.run||S.modal!=="again")return;const o=ofBy(S.rid);if(!o)return;Object.assign(o,{state:"todo",recut:true,made:0});S.tab="todo";S.modal=null;S.sel=[o.of];S.rid=null;},
+  start:()=>{if(S.run||!S.sel.length||S.sel.length>2||S.sel.some(id=>!["todo","partial"].includes(ofBy(id)?.state)))return;if(S.sel.length===2&&sheet(ofBy(S.sel[0]))!==sheet(ofBy(S.sel[1])))return;const now=Date.now(),user=me(),schedule=S.schedules[S.uid];S.run={id:uid(),ids:[...S.sel],phase:"prod",since:now,startedAt:now,prodMs:0,stopMs:0,reasonId:null,reason:null,base:Object.fromEntries(S.sel.map(id=>[id,ofBy(id).made||0])),context:{uid:S.uid,userName:user[1],operatorNo:user[3],shift:schedule.shift,schedule:{start:schedule.start,end:schedule.end},orders:orderSnapshot(S.sel,S.ofs)}};S.sel.forEach(id=>ofBy(id).state="run");S.sel=[];S.tab="run";},
+  stop:()=>{if(S.run?.phase!=="prod")return;closeSegment();Object.assign(S.run,{phase:"stop",reasonId:null,reason:null});S.stopPanel=true;},
+  why:value=>{if(S.run?.phase!=="stop"||!Number.isInteger(+value)||!t().rs[+value])return;S.run.reasonId=+value;S.run.reason=null;S.stopPanel=false;},
+  reasonPanel:()=>{if(S.run?.phase==="stop")S.stopPanel=!S.stopPanel;},hideReason:()=>S.stopPanel=false,
+  resume:()=>{if(S.run?.phase!=="stop")return;closeSegment();Object.assign(S.run,{phase:"prod",reasonId:null,reason:null});S.stopPanel=false;},
+  resumeWarn:()=>{A.resume();S.modal=null;S.rid=null;},
+  details:value=>{if(ofBy(value))S.expandedOf=S.expandedOf===value?null:value;},
+  editQuantity:value=>{if(listEditable(ofBy(value)))editingQuantity=value;},
+  full:value=>{const order=ofBy(value);if(canEditQuantity(order))order.made=order.plan;},
+  fin:()=>{if(S.run)S.modal="fin";},close:()=>{S.modal=null;S.rid=null;},
+  done:()=>{if(!S.run||S.modal!=="fin")return;const now=Date.now();closeSegment(now);const r=S.run,notes=[];let anyPartial=false;
+    r.ids.forEach(id=>{const o=ofBy(id),missing=Math.max(0,o.plan-o.made),produced=Math.max(0,o.made-(r.base?.[id]??0));
+      let discard=0;
+      // Only a 100% complete order is "Feita"; anything short stays "Em curso".
+      if(missing>0){o.state="partial";anyPartial=true;notes.push(fill(t().partialToast,{of:o.of,n:missing}));}
+      else o.state="done";
+      S.log.push({...r.context,id:uid(),runId:r.id,k:r.context.uid+"|"+localDay(now),t:"pcs",n:produced,total:o.made,plan:o.plan,discard,partial:o.state==="partial",dest:o.dest||NEXT_MACHINE,of:o.of,at:new Date(now).toISOString()});});
+    S.run=null;S.modal=null;S.stopPanel=false;S.tab=anyPartial?"run":"done";if(notes.length)setTimeout(()=>toast(notes.join(" ")),0);},
+  kbDate:value=>{S.filters.date=value==="today"?localDay():"";S.filters.shift="";},
+  resetFilters:()=>S.filters={date:"",user:""}
+};
+document.addEventListener("click",event=>{const button=event.target.closest("[data-a]");
+  if(S.menu&&!event.target.closest(".menu")&&button?.dataset.a!=="menu"){S.menu=false;if(!button){render();return;}}
+  if(!button||button.disabled)return;const action=A[button.dataset.a];if(action){
+  if(button.closest(".menu"))S.menu=false;
+  action(button.dataset.v);
+  render(["page","user","schedules","validate","out"].includes(button.dataset.a));
+  if(button.dataset.a==="editQuantity"){
+    const input=$("quantity-"+editingQuantity);
+    input?.focus();
+    input?.select();
+  }
+}});
+function updateQuantity(input,final=false){
+  const order=ofBy(input.dataset.quantity);if(!canEditQuantity(order))return;
+  const number=Number(input.value),valid=input.value.trim()!==""&&input.validity.valid&&Number.isSafeInteger(number)&&number>=0;
+  if(valid){
+    order.made=number;
+    document.querySelectorAll(`[data-piece-count="${CSS.escape(order.of)}"]`).forEach(el=>el.textContent=number>0||el.classList.contains("kb-qty")?`${number}/${order.plan}`:order.plan);
+    document.querySelectorAll(`[data-quantity="${CSS.escape(order.of)}"]`).forEach(other=>{if(other!==input)other.value=String(number);});
+    save();tick();
+    if(final){input.value=String(number);if(S.modal==="fin")render();}
+  }
+  else if(final){input.value=order.made;toast(t().invalidQuantity);}
+}
+document.addEventListener("input",event=>{const target=event.target;if(target.matches("[data-quantity]"))updateQuantity(target);
+  if(target.id==="of-search"){S.q=target.value.replace(/\D/g,"");document.querySelectorAll(".planning-list .of-card[data-of]").forEach(card=>card.hidden=!matchesQuery({of:card.dataset.of}));save();}});
+// Enter on a quantity or search field confirms the value and closes the on-screen keyboard.
+document.addEventListener("keydown",event=>{const target=event.target;if(event.key!=="Enter"||!target.matches?.("input"))return;
+  if(target.matches("[data-quantity]")){event.preventDefault();updateQuantity(target,true);target.blur();}
+  else if(target.id==="of-search"){event.preventDefault();target.blur();}});
+document.addEventListener("fullscreenchange",()=>render());
+// Self-update: when a newer version is served, reload (state lives in localStorage, so nothing is lost).
+async function checkVersion(){if(S.modal||document.activeElement?.matches?.("input"))return;try{const res=await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"});const html=await res.text();const m=/const APP_VERSION="([^"]+)"/.exec(html);if(m&&m[1]!==APP_VERSION)location.reload();}catch(e){}}
+setInterval(checkVersion,120000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)checkVersion();});
+document.addEventListener("change",event=>{const target=event.target;
+  if(target.matches("[data-quantity]"))updateQuantity(target,true);
+  if(target.id==="of-search"){S.q=target.value.replace(/\D/g,"");render();}
+  if(target.id==="filter-date"){S.filters.date=target.value;render();}
+  if(target.id==="lang-select"&&T[target.value]){S.lang=target.value;render();}
+});
+document.addEventListener("keydown",event=>{if(event.key==="Escape"){if(S.modal){A.close();render();}else if(S.stopPanel){S.stopPanel=false;render();}}if(event.key==="Tab"&&S.modal){const buttons=Array.from(document.querySelectorAll(".md button"));if(event.shiftKey&&document.activeElement===buttons[0]){event.preventDefault();buttons.at(-1).focus();}else if(!event.shiftKey&&document.activeElement===buttons.at(-1)){event.preventDefault();buttons[0].focus();}}});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)tick();});
+window.addEventListener("resize",syncInsets);
+setInterval(tick,1000);
+render();
+if(initialStorageError)toast(t().storageError);
+
+}
+</script>
+</body>
+</html>
